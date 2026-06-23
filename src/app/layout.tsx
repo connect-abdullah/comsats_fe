@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans, Geist } from "next/font/google";
 import "./globals.css";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { IMAGES } from "@/constants/images";
 import { cn } from "@/lib/utils";
 
@@ -74,7 +75,10 @@ export default function RootLayout({
         geist.variable,
       )}
     >
-      <body className="min-h-screen bg-white text-ink">{children}</body>
+      <body className="min-h-screen bg-white text-ink">
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }

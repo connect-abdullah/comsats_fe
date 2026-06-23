@@ -9,10 +9,31 @@ import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
 const BENTO_LAYOUT = [
-  { className: "", valueClassName: "text-3xl sm:text-4xl" },
-  { className: "", valueClassName: "text-2xl sm:text-3xl" },
-  { className: "", valueClassName: "text-2xl sm:text-3xl" },
-  { className: "sm:col-span-2", valueClassName: "text-2xl sm:text-3xl" },
+  {
+    className: "col-start-1 row-span-3 row-start-1 sm:row-span-2",
+    valueClassName: "text-2xl sm:text-4xl",
+    featured: true,
+    horizontal: false,
+  },
+  {
+    className: "col-start-2 row-start-1",
+    valueClassName: "text-base sm:text-2xl",
+    featured: false,
+    horizontal: true,
+  },
+  {
+    className: "col-start-2 row-start-2",
+    valueClassName: "text-base sm:text-2xl",
+    featured: false,
+    horizontal: true,
+  },
+  {
+    className:
+      "col-start-2 row-start-3 sm:col-span-2 sm:col-start-1 sm:row-start-3",
+    valueClassName: "text-base sm:text-2xl",
+    featured: false,
+    horizontal: true,
+  },
 ] as const;
 
 export function AboutComsats() {
@@ -33,13 +54,13 @@ export function AboutComsats() {
       <div className="absolute inset-0 bg-ink/20" aria-hidden="true" />
 
       <div className="container-cui relative z-10">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="space-y-6 lg:col-span-6"
+            className="space-y-5 lg:col-span-6"
           >
             <motion.span
               variants={fadeUp}
@@ -65,7 +86,7 @@ export function AboutComsats() {
             </motion.p>
             <motion.p
               variants={fadeUp}
-              className="text-sm leading-relaxed text-white/75"
+              className="text-sm leading-relaxed text-white/85 font-semibold"
             >
               We connect local leadership with global educational networks,
               partnering with top institutions to build academic ecosystems that
@@ -78,22 +99,27 @@ export function AboutComsats() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3 lg:col-span-6"
+            className="about-bento-grid lg:col-span-6"
           >
-            {ABOUT_STATS.map((stat, index) => (
-              <StatisticCard
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                subtitle={stat.subtitle}
-                helper={stat.helper}
-                icon={stat.icon}
-                variant="glass"
-                compact
-                className={cn(BENTO_LAYOUT[index]?.className)}
-                valueClassName={BENTO_LAYOUT[index]?.valueClassName}
-              />
-            ))}
+            {ABOUT_STATS.map((stat, index) => {
+              const layout = BENTO_LAYOUT[index];
+              return (
+                <StatisticCard
+                  key={stat.label}
+                  value={stat.value}
+                  label={stat.label}
+                  subtitle={stat.subtitle}
+                  helper={stat.helper}
+                  icon={stat.icon}
+                  variant="glass"
+                  compact
+                  featured={layout?.featured}
+                  horizontal={layout?.horizontal}
+                  className={cn(layout?.className)}
+                  valueClassName={layout?.valueClassName}
+                />
+              );
+            })}
           </motion.div>
         </div>
       </div>

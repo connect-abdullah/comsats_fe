@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 interface GlassCardProps {
   children: ReactNode;
   className?: string;
-  tone?: "light" | "dark";
+  tone?: "light" | "dark" | "stat";
 }
 
 export function GlassCard({
@@ -16,7 +16,11 @@ export function GlassCard({
     <div
       className={cn(
         "rounded-card p-6 shadow-soft",
-        tone === "dark" ? "glass" : "glass-light",
+        tone === "stat"
+          ? "glass-stat"
+          : tone === "dark"
+            ? "glass"
+            : "glass-light",
         className,
       )}
     >
