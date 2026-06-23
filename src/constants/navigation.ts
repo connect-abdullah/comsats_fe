@@ -24,7 +24,11 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { label: "YouTube", href: "https://www.youtube.com", icon: YoutubeIcon },
-  { label: "Instagram", href: "https://www.instagram.com", icon: InstagramIcon },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com",
+    icon: InstagramIcon,
+  },
   { label: "Facebook", href: "https://www.facebook.com", icon: FacebookIcon },
   { label: "Twitter / X", href: "https://twitter.com", icon: XIcon },
 ];

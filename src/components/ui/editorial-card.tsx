@@ -45,7 +45,11 @@ export function EditorialCard({
   className,
   priority = false,
 }: EditorialCardProps) {
-  const isCream = variant === "feature" || variant === "news" || variant === "event" || variant === "academic";
+  const isCream =
+    variant === "feature" ||
+    variant === "news" ||
+    variant === "event" ||
+    variant === "academic";
 
   return (
     <motion.article
@@ -59,7 +63,9 @@ export function EditorialCard({
         className,
       )}
     >
-      <div className={cn("relative w-full overflow-hidden", aspectMap[variant])}>
+      <div
+        className={cn("relative w-full overflow-hidden", aspectMap[variant])}
+      >
         <Image
           src={image}
           alt={title}
@@ -83,7 +89,9 @@ export function EditorialCard({
       <div className="flex flex-1 flex-col justify-between p-8">
         <div className="space-y-4">
           {variant === "event" && date && (
-            <p className="text-xs font-bold tracking-wider text-blue uppercase">{date}</p>
+            <p className="text-xs font-bold tracking-wider text-blue uppercase">
+              {date}
+            </p>
           )}
           {variant === "news" && date && (
             <p className="text-xs text-muted">{date}</p>

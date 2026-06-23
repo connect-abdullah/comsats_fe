@@ -6,7 +6,8 @@ export const CONTACT_CARDS: ContactCard[] = [
     icon: MapPin,
     title: "Campus Location",
     label: "Location",
-    value: "Park Road, Chathha Bakhtawar, Islamabad, Capital Territory, Pakistan",
+    value:
+      "Park Road, Chathha Bakhtawar, Islamabad, Capital Territory, Pakistan",
     href: "https://maps.google.com/?q=COMSATS+University+Islamabad",
     accent: "purple",
   },

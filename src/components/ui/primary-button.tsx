@@ -22,6 +22,8 @@ export function PrimaryButton({
   onClick,
   ariaLabel,
 }: PrimaryButtonProps) {
+  const buttonClasses = cn(baseClasses, className);
+
   if (href) {
     const isExternal = href.startsWith("http");
     const linkProps: ComponentProps<typeof Link> = { href };
@@ -30,21 +32,18 @@ export function PrimaryButton({
       linkProps.rel = "noopener noreferrer";
     }
     return (
-      <Link
-        {...linkProps}
-        aria-label={ariaLabel}
-        className={cn(baseClasses, className)}
-      >
+      <Link {...linkProps} aria-label={ariaLabel} className={buttonClasses}>
         {children}
       </Link>
     );
   }
+
   return (
     <button
       type={type}
       onClick={onClick}
       aria-label={ariaLabel}
-      className={cn(baseClasses, className)}
+      className={buttonClasses}
     >
       {children}
     </button>

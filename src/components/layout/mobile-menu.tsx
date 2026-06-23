@@ -33,7 +33,10 @@ function MobileNavItem({
         >
           {item.label}
           <ChevronDown
-            className={cn("h-4 w-4 transition-transform", expanded && "rotate-180")}
+            className={cn(
+              "h-4 w-4 transition-transform",
+              expanded && "rotate-180",
+            )}
             aria-hidden="true"
           />
         </button>
@@ -103,7 +106,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-2">
                 <BrandLogo size={40} />
-                <span className="text-sm font-bold text-ink">CUI Islamabad</span>
+                <span className="text-sm font-bold text-ink">
+                  CUI Islamabad
+                </span>
               </span>
               <button
                 type="button"

@@ -42,7 +42,10 @@ function MediaCard({
         </span>
         <span className="absolute inset-0 flex items-center justify-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/40 bg-white/15 backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
-            <Play className="ml-0.5 h-7 w-7 fill-white text-white" aria-hidden="true" />
+            <Play
+              className="ml-0.5 h-7 w-7 fill-white text-white"
+              aria-hidden="true"
+            />
           </span>
         </span>
       </div>

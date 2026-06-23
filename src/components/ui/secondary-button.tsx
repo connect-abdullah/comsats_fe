@@ -47,7 +47,12 @@ export function SecondaryButton({
     );
   }
   return (
-    <button type="button" onClick={onClick} aria-label={ariaLabel} className={classes}>
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={ariaLabel}
+      className={classes}
+    >
       {children}
     </button>
   );

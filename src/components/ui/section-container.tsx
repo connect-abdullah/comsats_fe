@@ -18,7 +18,9 @@ export function SectionContainer({
 }: SectionContainerProps) {
   return (
     <section id={id} className={cn("section-pad scroll-mt-24", className)}>
-      <div className={cn(fullWidth ? "w-full" : "container-cui", innerClassName)}>
+      <div
+        className={cn(fullWidth ? "w-full" : "container-cui", innerClassName)}
+      >
         {children}
       </div>
     </section>

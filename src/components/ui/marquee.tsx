@@ -9,6 +9,8 @@ interface MarqueeProps {
   gap?: string;
   className?: string;
   pauseOnHover?: boolean;
+  /** Scroll direction: left = content moves right-to-left, right = left-to-right. */
+  direction?: "left" | "right";
 }
 
 export function Marquee({
@@ -17,6 +19,7 @@ export function Marquee({
   gap = "1.5rem",
   className,
   pauseOnHover = true,
+  direction = "left",
 }: MarqueeProps) {
   const style = {
     "--marquee-duration": `${duration}s`,
@@ -31,7 +34,13 @@ export function Marquee({
         className,
       )}
     >
-      <div className="marquee-track" style={{ ...style, gap }}>
+      <div
+        className={cn(
+          "marquee-track",
+          direction === "right" && "marquee-track-reverse",
+        )}
+        style={{ ...style, gap }}
+      >
         <div className="flex shrink-0" style={{ gap }}>
           {children}
         </div>

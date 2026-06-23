@@ -6,40 +6,40 @@ Design and develop a premium, modern, enterprise-grade university website for **
 
 The website should immediately communicate:
 
-* Academic Excellence
-* Innovation & Research
-* Student Success
-* Institutional Trust
-* Global Standards
-* Future-Focused Education
+- Academic Excellence
+- Innovation & Research
+- Student Success
+- Institutional Trust
+- Global Standards
+- Future-Focused Education
 
 The visual quality should be comparable to leading universities such as:
 
-* MIT
-* Stanford
-* NUS
-* KAUST
-* University of Melbourne
+- MIT
+- Stanford
+- NUS
+- KAUST
+- University of Melbourne
 
 while preserving COMSATS branding and identity.
 
 The design should NOT look like:
 
-* Generic WordPress university themes
-* Government-style websites
-* Outdated educational portals
-* Template-based university websites
+- Generic WordPress university themes
+- Government-style websites
+- Outdated educational portals
+- Template-based university websites
 
 The website should feel:
 
-* Premium
-* Modern
-* Professional
-* Research-focused
-* Clean
-* Trustworthy
-* Responsive
-* Fast
+- Premium
+- Modern
+- Professional
+- Research-focused
+- Clean
+- Trustworthy
+- Responsive
+- Fast
 
 ---
 
@@ -47,22 +47,22 @@ The website should feel:
 
 ## Frontend
 
-* Next.js (App Router)
-* TypeScript
-* Tailwind CSS
-* shadcn/ui
-* Framer Motion
-* Lucide React
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
+- Lucide React
 
 ## Requirements
 
-* Server Components where appropriate
-* SEO Friendly
-* Fully Responsive
-* Accessibility Focused
-* Modular Architecture
-* Reusable Components
-* Optimized Performance
+- Server Components where appropriate
+- SEO Friendly
+- Fully Responsive
+- Accessibility Focused
+- Modular Architecture
+- Reusable Components
+- Optimized Performance
 
 ---
 
@@ -249,21 +249,21 @@ Letter Spacing
 
 Use:
 
-* Consistent spacing
-* Strong hierarchy
-* Clean typography
-* Subtle glass effects
-* Soft shadows
-* Consistent card styles
-* Consistent button styles
+- Consistent spacing
+- Strong hierarchy
+- Clean typography
+- Subtle glass effects
+- Soft shadows
+- Consistent card styles
+- Consistent button styles
 
 Avoid:
 
-* Random colors
-* Inconsistent cards
-* Excessive animations
-* Heavy gradients
-* Over-designed sections
+- Random colors
+- Inconsistent cards
+- Excessive animations
+- Heavy gradients
+- Over-designed sections
 
 ---
 
@@ -275,17 +275,17 @@ Every section should animate on viewport entry.
 
 Animations:
 
-* Fade Up
-* Stagger Children
-* Hover Lift
-* Scale Hover
-* Subtle Parallax
+- Fade Up
+- Stagger Children
+- Hover Lift
+- Scale Hover
+- Subtle Parallax
 
 Never use:
 
-* Flashy effects
-* Rotating elements
-* Excessive motion
+- Flashy effects
+- Rotating elements
+- Excessive motion
 
 Only Hero Scroll Indicator may continuously bounce.
 
@@ -297,10 +297,10 @@ Only Hero Scroll Indicator may continuously bounce.
 
 Initial State:
 
-* Full Width
-* Transparent
-* Positioned Absolute
-* Glass Blur Effect
+- Full Width
+- Transparent
+- Positioned Absolute
+- Glass Blur Effect
 
 ```css
 backdrop-filter: blur(20px);
@@ -326,7 +326,7 @@ Transition: 400ms
 Glassmorphism:
 
 ```css
-background: rgba(255,255,255,0.08);
+background: rgba(255, 255, 255, 0.08);
 backdrop-filter: blur(24px);
 ```
 
@@ -334,23 +334,23 @@ backdrop-filter: blur(24px);
 
 ## Left Side
 
-* COMSATS Logo
-* COMSATS University Islamabad
-* Islamabad Campus
+- COMSATS Logo
+- COMSATS University Islamabad
+- Islamabad Campus
 
 ---
 
 ## Center Navigation
 
-* Home
-* News
-* Academics
-* Admissions
-* Research
-* Library
-* Healthcare
-* Campus Life
-* About
+- Home
+- News
+- Academics
+- Admissions
+- Research
+- Library
+- Healthcare
+- Campus Life
+- About
 
 ---
 
@@ -433,15 +433,15 @@ Rounded Buttons
 
 Use Lucide Icons
 
-* Youtube
-* Instagram
-* Facebook
-* Twitter/X
+- Youtube
+- Instagram
+- Facebook
+- Twitter/X
 
 Hover
 
-* Scale Up
-* Shadow Increase
+- Scale Up
+- Shadow Increase
 
 ---
 
@@ -451,8 +451,8 @@ Centered at bottom of hero.
 
 Contains:
 
-* Arrow Down Icon
-* Explore More Campus
+- Arrow Down Icon
+- Explore More Campus
 
 Continuous floating animation.
 
@@ -464,9 +464,9 @@ Large media placeholder.
 
 Will later support:
 
-* Campus Video
-* Campus Slideshow
-* Interactive Showcase
+- Campus Video
+- Campus Slideshow
+- Interactive Showcase
 
 Aspect Ratio
 
@@ -502,18 +502,18 @@ Infinite marquee.
 
 Mixed cards:
 
-* Images
-* Videos
+- Images
+- Videos
 
 Video Cards
 
-* Play Button Overlay
+- Play Button Overlay
 
 Behavior
 
-* Auto Scroll
-* Infinite Loop
-* Pause On Hover
+- Auto Scroll
+- Infinite Loop
+- Pause On Hover
 
 ---
 
@@ -539,9 +539,9 @@ Explore programs and admission criteria. Begin your application today.
 
 Each Card Includes
 
-* Icon
-* Title
-* Description
+- Icon
+- Title
+- Description
 
 ---
 
@@ -599,10 +599,10 @@ Student Service Center
 
 Each Card
 
-* Image
-* Title
-* Description
-* Explore Button
+- Image
+- Title
+- Description
+- Explore Button
 
 Section CTA
 
@@ -648,9 +648,9 @@ Latest News
 
 Cards Include
 
-* News Image
-* Title
-* Publication Date
+- News Image
+- Title
+- Publication Date
 
 CTA
 
@@ -708,10 +708,10 @@ COMSATS University Islamabad is a leading institution dedicated to advancing edu
 
 ## Statistics Cards
 
-* 7+ Campuses
-* Top Ranked University in Pakistan
-* Future Ready Education
-* AI & Innovation Driven
+- 7+ Campuses
+- Top Ranked University in Pakistan
+- Future Ready Education
+- AI & Innovation Driven
 
 Use Glassmorphism Cards.
 
@@ -729,10 +729,10 @@ Continuous marquee.
 
 Cards Include
 
-* Event Image
-* Event Title
-* Event Description
-* Event Date
+- Event Image
+- Event Title
+- Event Description
+- Event Date
 
 Reuse same card design as News.
 
@@ -754,19 +754,19 @@ Discover world-class departments driving innovation, research and future educati
 
 ## Departments
 
-* Computer Science
-* Electrical Engineering
-* Architecture
-* Art & Design
-* Management Sciences
-* Mathematics
-* Physics
-* Chemistry
+- Computer Science
+- Electrical Engineering
+- Architecture
+- Art & Design
+- Management Sciences
+- Mathematics
+- Physics
+- Chemistry
 
 Each Card
 
-* Lucide Icon
-* Department Name
+- Lucide Icon
+- Department Name
 
 CTA
 
@@ -780,16 +780,16 @@ View All Departments
 
 Cards
 
-* Faculty & Departments
-* Centers & Offices
-* Course Catalogue
+- Faculty & Departments
+- Centers & Offices
+- Course Catalogue
 
 Each Card
 
-* Image
-* Title
-* Description
-* Read More Button
+- Image
+- Title
+- Description
+- Read More Button
 
 Maintain same card language.
 
@@ -809,22 +809,22 @@ View More loads additional services.
 
 Services
 
-* Safety First
-* Regular Classes
-* Highly Qualified Teachers
-* Modern Classrooms
-* Cafeteria
-* Transport
-* Sports Facilities
-* State-of-the-Art Labs
-* Student Support Services
-* Research Facilities
+- Safety First
+- Regular Classes
+- Highly Qualified Teachers
+- Modern Classrooms
+- Cafeteria
+- Transport
+- Sports Facilities
+- State-of-the-Art Labs
+- Student Support Services
+- Research Facilities
 
 Each Card
 
-* Icon
-* Title
-* Description
+- Icon
+- Title
+- Description
 
 ---
 
@@ -898,10 +898,10 @@ Create 9–10 testimonials.
 
 Each Card
 
-* Student Image
-* Student Name
-* Program
-* Testimonial
+- Student Image
+- Student Name
+- Program
+- Testimonial
 
 Infinite auto-scrolling marquee.
 
@@ -919,10 +919,10 @@ Right
 
 Cards
 
-* Location
-* Email
-* Phone Number
-* Admissions Contact
+- Location
+- Email
+- Phone Number
+- Admissions Contact
 
 Use Lucide Icons.
 
@@ -958,41 +958,41 @@ Admissions Phone
 
 ## Resources
 
-* HEC
-* Refund Policy
-* POLs
-* Online SOPs
-* Degree Verification
-* Undergraduate Admissions
-* Graduate Admissions
+- HEC
+- Refund Policy
+- POLs
+- Online SOPs
+- Degree Verification
+- Undergraduate Admissions
+- Graduate Admissions
 
 ---
 
 ## Student Life
 
-* Rules & Regulations
-* Hostel Reservation
-* Telephone Directory
-* Reader Society
-* QEC
+- Rules & Regulations
+- Hostel Reservation
+- Telephone Directory
+- Reader Society
+- QEC
 
 ---
 
 ## Support
 
-* Office 365 Setup
-* SECP Guide
-* Statutory Information
-* Elections
+- Office 365 Setup
+- SECP Guide
+- Statutory Information
+- Elections
 
 ---
 
 ## Follow Us
 
-* YouTube
-* Instagram
-* Facebook
-* X
+- YouTube
+- Instagram
+- Facebook
+- X
 
 ---
 
@@ -1034,27 +1034,27 @@ Mobile
 
 Requirements
 
-* No horizontal overflow
-* No layout shifts
-* Responsive typography
-* Responsive spacing
-* Responsive cards
-* Mobile-friendly navigation
-* Touch-friendly buttons
+- No horizontal overflow
+- No layout shifts
+- Responsive typography
+- Responsive spacing
+- Responsive cards
+- Mobile-friendly navigation
+- Touch-friendly buttons
 
 ---
 
 # PERFORMANCE REQUIREMENTS
 
-* Use Next/Image everywhere
-* Lazy Load Images
-* Lazy Load Videos
-* Dynamic Imports where appropriate
-* Optimized Framer Motion animations
-* Lighthouse Score 90+
-* SEO Optimized
-* Accessible Components
-* Fast Initial Load
+- Use Next/Image everywhere
+- Lazy Load Images
+- Lazy Load Videos
+- Dynamic Imports where appropriate
+- Optimized Framer Motion animations
+- Lighthouse Score 90+
+- SEO Optimized
+- Accessible Components
+- Fast Initial Load
 
 ---
 
@@ -1062,10 +1062,10 @@ Requirements
 
 Create ONE unified card design system and reuse it throughout:
 
-* Campus Life
-* News
-* Events
-* Academics
+- Campus Life
+- News
+- Events
+- Academics
 
 Create ONE unified section header component and reuse it throughout.
 
@@ -1211,14 +1211,14 @@ Display a centered play button overlay.
 
 Requirements:
 
-* Circular button
-* Glassmorphism effect
-* White play icon
-* Slight scale animation on hover
+- Circular button
+- Glassmorphism effect
+- White play icon
+- Slight scale animation on hover
 
 ```css
 backdrop-filter: blur(12px);
-background: rgba(255,255,255,0.15);
+background: rgba(255, 255, 255, 0.15);
 ```
 
 ---
@@ -1227,10 +1227,10 @@ background: rgba(255,255,255,0.15);
 
 On card hover:
 
-* Image zooms slightly
-* Play button scales up
-* Card elevates
-* Shadow increases
+- Image zooms slightly
+- Play button scales up
+- Card elevates
+- Shadow increases
 
 Animation should be subtle and premium.
 
@@ -1246,11 +1246,11 @@ Options:
 
 Preferred:
 
-* Open in modal video player
+- Open in modal video player
 
 Fallback:
 
-* Open YouTube link in new tab
+- Open YouTube link in new tab
 
 ---
 
@@ -1260,12 +1260,12 @@ The carousel should feel modern and continuous.
 
 Requirements:
 
-* Infinite loop
-* Auto-scroll
-* Pause on hover
-* Drag support on desktop
-* Touch swipe support on mobile
-* Smooth Framer Motion animation
+- Infinite loop
+- Auto-scroll
+- Pause on hover
+- Drag support on desktop
+- Touch swipe support on mobile
+- Smooth Framer Motion animation
 
 Do not use traditional slider arrows.
 
@@ -1307,15 +1307,15 @@ For the rest of the homepage sections, use the images already provided in the pu
 
 Examples:
 
-* Hero Section → campus hero image/video assets
-* Campus Life → student affairs related images
-* Leadership Message → director image
-* About COMSATS → campus overview image
-* Library Section → Junaid Zaidi Library image
-* Latest News → news-related images
-* Events → event images
-* Testimonials → student images
-* Contact Section → campus/location imagery
+- Hero Section → campus hero image/video assets
+- Campus Life → student affairs related images
+- Leadership Message → director image
+- About COMSATS → campus overview image
+- Library Section → Junaid Zaidi Library image
+- Latest News → news-related images
+- Events → event images
+- Testimonials → student images
+- Contact Section → campus/location imagery
 
 Do not use random placeholders if a relevant image already exists in the public folder.
 
@@ -1327,10 +1327,10 @@ The implementation should intelligently map available assets from the public fol
 
 This section should immediately communicate:
 
-* Active Student Life
-* Campus Culture
-* University Events
-* Student Engagement
-* Academic & Extracurricular Excellence
+- Active Student Life
+- Campus Culture
+- University Events
+- Student Engagement
+- Academic & Extracurricular Excellence
 
 The overall feel should be similar to the media showcase sections found on premium university websites, with a polished, modern, and immersive experience rather than a traditional image gallery.

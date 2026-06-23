@@ -2,7 +2,9 @@ import type { ComponentType, SVGProps } from "react";
 import type { LucideIcon } from "lucide-react";
 
 /** Any icon component (lucide or custom brand SVG) usable with a className. */
-export type IconType = ComponentType<{ className?: string } & SVGProps<SVGSVGElement>>;
+export type IconType = ComponentType<
+  { className?: string } & SVGProps<SVGSVGElement>
+>;
 
 export interface NavItem {
   label: string;
@@ -54,7 +56,15 @@ export interface Department {
   name: string;
   icon: LucideIcon;
   description: string;
-  accent: "purple" | "blue" | "amber" | "emerald" | "rose" | "indigo" | "cyan" | "teal";
+  accent:
+    | "purple"
+    | "blue"
+    | "amber"
+    | "emerald"
+    | "rose"
+    | "indigo"
+    | "cyan"
+    | "teal";
 }
 
 export interface AcademicCard {
@@ -68,7 +78,16 @@ export interface ServiceItem {
   title: string;
   description: string;
   icon: LucideIcon;
-  accent: "purple" | "blue" | "amber" | "emerald" | "rose" | "cyan" | "teal" | "indigo" | "orange";
+  accent:
+    | "purple"
+    | "blue"
+    | "amber"
+    | "emerald"
+    | "rose"
+    | "cyan"
+    | "teal"
+    | "indigo"
+    | "orange";
 }
 
 export interface Statistic {

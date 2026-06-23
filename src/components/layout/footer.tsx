@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
-import {
-  FOOTER_COLUMNS,
-  UNIVERSITY_INFO,
-  COPYRIGHT,
-} from "@/constants/footer";
+import { FOOTER_COLUMNS, UNIVERSITY_INFO, COPYRIGHT } from "@/constants/footer";
 import { SOCIAL_LINKS } from "@/constants/navigation";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { SocialButton } from "@/components/ui/social-button";
@@ -25,17 +21,29 @@ export function Footer() {
             </div>
             <ul className="flex flex-col gap-3 text-sm text-white/70">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
+                <MapPin
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
                 <span>{UNIVERSITY_INFO.address}</span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
-                <a href={`tel:${UNIVERSITY_INFO.phone}`} className="hover:text-white">
+                <Phone
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
+                <a
+                  href={`tel:${UNIVERSITY_INFO.phone}`}
+                  className="hover:text-white"
+                >
                   {UNIVERSITY_INFO.phone}
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
+                <Mail
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
                 <a
                   href={`mailto:${UNIVERSITY_INFO.admissionsEmail}`}
                   className="hover:text-white"
@@ -44,7 +52,10 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" aria-hidden="true" />
+                <Phone
+                  className="mt-0.5 h-4 w-4 shrink-0 text-blue-400"
+                  aria-hidden="true"
+                />
                 <span>Admissions: {UNIVERSITY_INFO.admissionsPhone}</span>
               </li>
             </ul>
@@ -59,7 +70,10 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5 text-sm text-white/70">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="transition-colors hover:text-white">
+                    <Link
+                      href={link.href}
+                      className="transition-colors hover:text-white"
+                    >
                       {link.label}
                     </Link>
                   </li>

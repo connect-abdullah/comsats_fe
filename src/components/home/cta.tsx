@@ -37,7 +37,10 @@ export function UniversityCta() {
             Fall 2026 Admissions Now Open
           </motion.div>
 
-          <motion.div variants={fadeUp} className="relative mx-auto mb-5 flex justify-center">
+          <motion.div
+            variants={fadeUp}
+            className="relative mx-auto mb-5 flex justify-center"
+          >
             <div className="rounded-full bg-white p-1 shadow-lg shadow-black/10 ring-2 ring-white/20">
               <BrandLogo size={64} />
             </div>
@@ -54,11 +57,14 @@ export function UniversityCta() {
             variants={fadeUp}
             className="relative mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/90"
           >
-            Pakistan&apos;s leading university for innovation, research, and world-class
-            education.
+            Pakistan&apos;s leading university for innovation, research, and
+            world-class education.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="relative mt-8 flex justify-center">
+          <motion.div
+            variants={fadeUp}
+            className="relative mt-8 flex justify-center"
+          >
             <Link
               href="#admissions"
               className="group inline-flex items-center justify-center gap-2 rounded-pill bg-white px-9 py-4 text-base font-bold tracking-wide text-purple shadow-lg shadow-black/10 transition-all duration-300 hover:bg-zinc-50"

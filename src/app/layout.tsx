@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans, Geist } from "next/font/google";
 import "./globals.css";
+import { IMAGES } from "@/constants/images";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -48,6 +52,10 @@ export const metadata: Metadata = {
     description:
       "Empowering future leaders through innovation, research and world-class education.",
   },
+  icons: {
+    icon: IMAGES.brand.logo,
+    apple: IMAGES.brand.logo,
+  },
 };
 
 export default function RootLayout({
@@ -56,7 +64,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${cormorant.variable} antialiased`}>
+    <html
+      lang="en"
+      className={cn(
+        "antialiased",
+        jakarta.variable,
+        cormorant.variable,
+        "font-sans",
+        geist.variable,
+      )}
+    >
       <body className="min-h-screen bg-white text-ink">{children}</body>
     </html>
   );

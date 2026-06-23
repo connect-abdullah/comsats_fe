@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { PrimaryButton } from "@/components/ui/primary-button";
 import { SecondaryButton } from "@/components/ui/secondary-button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { SocialButton } from "@/components/ui/social-button";
 import { SOCIAL_LINKS } from "@/constants/navigation";
 import { IMAGES } from "@/constants/images";
@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[900px] items-center overflow-hidden pt-32 pb-20 lg:h-screen"
+      className="relative flex min-h-[900px] items-center overflow-hidden pt-26 pb-20 lg:h-screen"
     >
       <Image
         src={IMAGES.hero.background}
@@ -29,7 +29,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-purple/55" aria-hidden="true" />
       <div className="absolute inset-0 bg-ink/20" aria-hidden="true" />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-ink/50 via-purple/25 to-purple/10"
+        className="absolute inset-0 bg-linear-to-r from-ink/50 via-purple/25 to-purple/10"
         aria-hidden="true"
       />
 
@@ -43,9 +43,12 @@ export function Hero() {
         >
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-3 rounded-pill border border-white/25 bg-white/10 px-4 py-2 font-sans text-sm font-semibold uppercase tracking-wider text-white backdrop-blur-sm"
+            className="inline-flex max-w-full items-center gap-1.5 rounded-pill border border-white/25 bg-white/10 px-2.5 py-1 text-[10px] font-semibold tracking-wide whitespace-normal text-white uppercase backdrop-blur-sm sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[10px] sm:tracking-wider sm:whitespace-nowrap md:gap-2 md:px-3 md:py-2 md:text-[11px] md:tracking-wider"
           >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400" aria-hidden="true" />
+            <span
+              className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-blue-400 sm:h-2 sm:w-2"
+              aria-hidden="true"
+            />
             Leading University of Pakistan
           </motion.span>
 
@@ -53,12 +56,13 @@ export function Hero() {
             variants={fadeUp}
             className="font-heading text-[2.5rem] font-bold leading-[1.05] tracking-tight text-white md:text-[3.5rem] lg:text-[4.5rem]"
           >
-            Empowering Future{" "}
-            <br className="hidden md:block" />
+            Empowering Future <br className="hidden md:block" />
             Leaders Through{" "}
-            <span className="font-medium italic text-blue-300">Innovation</span>, Research
-            &amp;{" "}
-            <span className="font-semibold italic text-purple-200">World-Class</span>{" "}
+            <span className="font-medium italic text-blue-300">Innovation</span>
+            , Research &amp;{" "}
+            <span className="font-semibold italic text-purple-200">
+              World-Class
+            </span>{" "}
             Education.
           </motion.h1>
 
@@ -67,20 +71,38 @@ export function Hero() {
             className="max-w-xl font-sans text-lg leading-relaxed text-white/85"
           >
             COMSATS University Islamabad combines elite academic rigor with an
-            energetic research community. Step onto Pakistan&apos;s premier campus
-            designed to spark discovery and shape global impact.
+            energetic research community. Step onto Pakistan&apos;s premier
+            campus designed to spark discovery and shape global impact.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex w-full flex-wrap items-center gap-4 sm:w-auto">
-            <PrimaryButton href="#admissions" className="w-full sm:w-auto">
-              Apply Now
-            </PrimaryButton>
-            <SecondaryButton href="#academics" variant="light" className="w-full sm:w-auto">
+          <motion.div
+            variants={fadeUp}
+            className="flex w-full flex-wrap items-center gap-4 sm:w-auto"
+          >
+            <Link href="#admissions" className="w-full sm:w-auto">
+              <ShimmerButton
+                className="w-full px-7 py-3.5 text-base font-semibold shadow-glow sm:w-auto"
+                background="linear-gradient(120deg, #4c227b 0%, #0f5ea6 100%)"
+                shimmerColor="#ffffff"
+                shimmerDuration="3s"
+                borderRadius="999px"
+              >
+                Apply Now
+              </ShimmerButton>
+            </Link>
+            <SecondaryButton
+              href="#academics"
+              variant="light"
+              className="border-none w-full sm:w-auto"
+            >
               Explore Programs
             </SecondaryButton>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="flex items-center gap-4 pt-2">
+          <motion.div
+            variants={fadeUp}
+            className="flex items-center gap-4 pt-2"
+          >
             {SOCIAL_LINKS.map((social) => (
               <SocialButton
                 key={social.label}

@@ -12,10 +12,7 @@ import type { ServiceItem } from "@/types";
 
 const INITIAL_COUNT = 6;
 
-const accentStyles: Record<
-  ServiceItem["accent"],
-  string
-> = {
+const accentStyles: Record<ServiceItem["accent"], string> = {
   purple: "bg-purple/5 text-purple",
   blue: "bg-blue/5 text-blue",
   amber: "bg-amber-500/5 text-amber-600",
@@ -68,7 +65,9 @@ export function Services() {
                 >
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-ink">{service.title}</h3>
+                <h3 className="mt-6 text-xl font-bold text-ink">
+                  {service.title}
+                </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
                   {service.description}
                 </p>
@@ -87,7 +86,10 @@ export function Services() {
           >
             {showAll ? "View Less Services" : "View More Services"}
             <ChevronDown
-              className={cn("ml-2 h-5 w-5 transition-transform", showAll && "rotate-180")}
+              className={cn(
+                "ml-2 h-5 w-5 transition-transform",
+                showAll && "rotate-180",
+              )}
               aria-hidden="true"
             />
           </button>

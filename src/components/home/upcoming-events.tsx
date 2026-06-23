@@ -27,8 +27,8 @@ export function UpcomingEvents() {
             viewport={viewportOnce}
             className="max-w-xl text-lg leading-relaxed text-muted"
           >
-            Register and join active forums, tech bootcamps, architectural shows, and
-            community dialogue platforms across the campus.
+            Register and join active forums, tech bootcamps, architectural
+            shows, and community dialogue platforms across the campus.
           </motion.p>
         </div>
       </div>

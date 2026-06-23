@@ -25,7 +25,10 @@ export function IconBox({
         className,
       )}
     >
-      <Icon className={size === "lg" ? "h-7 w-7" : "h-6 w-6"} aria-hidden="true" />
+      <Icon
+        className={size === "lg" ? "h-7 w-7" : "h-6 w-6"}
+        aria-hidden="true"
+      />
     </span>
   );
 }

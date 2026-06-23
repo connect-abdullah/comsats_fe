@@ -4,7 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/animations";
+import {
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+  viewportOnce,
+} from "@/lib/animations";
+import { StatCountUp } from "@/components/ui/stat-count-up";
 import { cn } from "@/lib/utils";
 import { IMAGES } from "@/constants/images";
 
@@ -42,19 +48,21 @@ export function Library() {
               variants={fadeUp}
               className="text-base leading-relaxed text-muted sm:text-lg"
             >
-              The Junaid Zaidi Library serves as a vital part of COMSATS University
-              Islamabad&apos;s academic mission. It provides access to extensive print and
-              digital resources, supports curriculum requirements, and offers an environment
-              that encourages learning, research, and intellectual growth.
+              The Junaid Zaidi Library serves as a vital part of COMSATS
+              University Islamabad&apos;s academic mission. It provides access
+              to extensive print and digital resources, supports curriculum
+              requirements, and offers an environment that encourages learning,
+              research, and intellectual growth.
             </motion.p>
             <motion.p
               variants={fadeUp}
               className="text-sm leading-relaxed text-muted"
             >
-              The library delivers customized information services tailored to the needs of
-              students, faculty, and researchers. With quiet study areas, high-speed
-              computational research hubs, and vast databases of digital publications, the
-              library acts as an active catalyst for academic discovery.
+              The library delivers customized information services tailored to
+              the needs of students, faculty, and researchers. With quiet study
+              areas, high-speed computational research hubs, and vast databases
+              of digital publications, the library acts as an active catalyst
+              for academic discovery.
             </motion.p>
 
             <motion.div
@@ -63,15 +71,16 @@ export function Library() {
             >
               {LIBRARY_STATS.map((stat) => (
                 <div key={stat.label} className="min-w-0">
-                  <span
+                  <StatCountUp
+                    value={stat.value}
                     className={cn(
                       "block text-2xl font-bold sm:text-3xl",
                       stat.color,
                     )}
-                  >
-                    {stat.value}
+                  />
+                  <span className="mt-1 block text-xs text-muted">
+                    {stat.label}
                   </span>
-                  <span className="mt-1 block text-xs text-muted">{stat.label}</span>
                 </div>
               ))}
             </motion.div>
@@ -82,7 +91,10 @@ export function Library() {
                 className="inline-flex items-center text-sm font-semibold text-purple transition-colors hover:text-blue"
               >
                 Launch Library OPAC Search
-                <ArrowUpRight className="ml-1 h-4 w-4 shrink-0" aria-hidden="true" />
+                <ArrowUpRight
+                  className="ml-1 h-4 w-4 shrink-0"
+                  aria-hidden="true"
+                />
               </Link>
             </motion.div>
           </motion.div>

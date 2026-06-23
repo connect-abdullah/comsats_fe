@@ -53,7 +53,12 @@ interface DepartmentCardProps {
   accent: Department["accent"];
 }
 
-export function DepartmentCard({ name, icon: Icon, description, accent }: DepartmentCardProps) {
+export function DepartmentCard({
+  name,
+  icon: Icon,
+  description,
+  accent,
+}: DepartmentCardProps) {
   const styles = accentStyles[accent];
 
   return (

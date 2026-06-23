@@ -54,9 +54,9 @@ export function Admissions() {
             variants={fadeUp}
             className="text-lg leading-relaxed text-muted"
           >
-            COMSATS University Islamabad prepares elite candidates for transformative
-            roles. Explore admissions timelines, program frameworks, and apply to join
-            a network of elite scholars.
+            COMSATS University Islamabad prepares elite candidates for
+            transformative roles. Explore admissions timelines, program
+            frameworks, and apply to join a network of elite scholars.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 pt-4">
@@ -118,8 +118,12 @@ export function Admissions() {
                     {card.badge}
                   </span>
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-ink">{card.title}</h3>
-                <p className="mt-4 leading-relaxed text-muted">{card.description}</p>
+                <h3 className="mt-6 text-2xl font-bold text-ink">
+                  {card.title}
+                </h3>
+                <p className="mt-4 leading-relaxed text-muted">
+                  {card.description}
+                </p>
                 <div className="mt-8 flex items-center justify-between border-t border-line pt-6">
                   <Link
                     href="#admissions"

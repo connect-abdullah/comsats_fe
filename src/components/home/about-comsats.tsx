@@ -6,10 +6,21 @@ import { StatisticCard } from "@/components/ui/statistic-card";
 import { ABOUT_STATS } from "@/constants/stats";
 import { IMAGES } from "@/constants/images";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
+import { cn } from "@/lib/utils";
+
+const BENTO_LAYOUT = [
+  { className: "", valueClassName: "text-3xl sm:text-4xl" },
+  { className: "", valueClassName: "text-2xl sm:text-3xl" },
+  { className: "", valueClassName: "text-2xl sm:text-3xl" },
+  { className: "sm:col-span-2", valueClassName: "text-2xl sm:text-3xl" },
+] as const;
 
 export function AboutComsats() {
   return (
-    <section id="about" className="relative scroll-mt-24 overflow-hidden section-pad">
+    <section
+      id="about"
+      className="relative scroll-mt-24 overflow-hidden section-pad"
+    >
       <Image
         src={IMAGES.campus.overview}
         alt=""
@@ -46,18 +57,19 @@ export function AboutComsats() {
               variants={fadeUp}
               className="text-lg leading-relaxed text-white/85"
             >
-              COMSATS University Islamabad stands as a pillar of intellectual rigor in
-              Pakistan. Recognized globally for excellence, our multi-campus framework
-              inspires scientific breakthroughs, technological prowess, and prepares
-              student cohorts for highly competitive futures.
+              COMSATS University Islamabad stands as a pillar of intellectual
+              rigor in Pakistan. Recognized globally for excellence, our
+              multi-campus framework inspires scientific breakthroughs,
+              technological prowess, and prepares student cohorts for highly
+              competitive futures.
             </motion.p>
             <motion.p
               variants={fadeUp}
               className="text-sm leading-relaxed text-white/75"
             >
-              We connect local leadership with global educational networks, partnering
-              with top institutions to build academic ecosystems that drive the economy
-              and fuel transformative progress.
+              We connect local leadership with global educational networks,
+              partnering with top institutions to build academic ecosystems that
+              drive the economy and fuel transformative progress.
             </motion.p>
           </motion.div>
 
@@ -66,9 +78,9 @@ export function AboutComsats() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-6"
+            className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3 lg:col-span-6"
           >
-            {ABOUT_STATS.map((stat) => (
+            {ABOUT_STATS.map((stat, index) => (
               <StatisticCard
                 key={stat.label}
                 value={stat.value}
@@ -76,6 +88,10 @@ export function AboutComsats() {
                 subtitle={stat.subtitle}
                 helper={stat.helper}
                 icon={stat.icon}
+                variant="glass"
+                compact
+                className={cn(BENTO_LAYOUT[index]?.className)}
+                valueClassName={BENTO_LAYOUT[index]?.valueClassName}
               />
             ))}
           </motion.div>

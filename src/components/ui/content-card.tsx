@@ -64,7 +64,10 @@ export function ContentCard({
             className="mt-auto inline-flex items-center gap-1.5 pt-2 text-sm font-semibold text-purple transition-colors hover:text-blue"
           >
             {ctaLabel}
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            <ArrowRight
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              aria-hidden="true"
+            />
           </Link>
         )}
       </div>

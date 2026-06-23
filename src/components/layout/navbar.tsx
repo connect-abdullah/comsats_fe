@@ -9,13 +9,7 @@ import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types";
 import { MobileMenu } from "./mobile-menu";
 
-function NavLink({
-  item,
-  scrolled,
-}: {
-  item: NavItem;
-  scrolled: boolean;
-}) {
+function NavLink({ item, scrolled }: { item: NavItem; scrolled: boolean }) {
   const linkClass = cn(
     "rounded-pill px-3.5 py-2 text-sm font-medium transition-colors",
     scrolled
@@ -133,7 +127,8 @@ export function Navbar() {
                   scrolled ? "text-ink" : "text-white",
                 )}
               >
-                COMSATS University Islamabad
+                COMSATS <span className="max-[319px]:hidden">University </span>
+                <span className="max-[424px]:hidden">Islamabad</span>
               </span>
               <span
                 className={cn(
@@ -149,7 +144,11 @@ export function Navbar() {
           <ul className="hidden items-center gap-1 xl:flex">
             {NAV_ITEMS.map((item) =>
               item.children ? (
-                <AboutDropdown key={item.label} item={item} scrolled={scrolled} />
+                <AboutDropdown
+                  key={item.label}
+                  item={item}
+                  scrolled={scrolled}
+                />
               ) : (
                 <li key={item.label}>
                   <NavLink item={item} scrolled={scrolled} />

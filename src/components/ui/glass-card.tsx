@@ -7,7 +7,11 @@ interface GlassCardProps {
   tone?: "light" | "dark";
 }
 
-export function GlassCard({ children, className, tone = "dark" }: GlassCardProps) {
+export function GlassCard({
+  children,
+  className,
+  tone = "dark",
+}: GlassCardProps) {
   return (
     <div
       className={cn(

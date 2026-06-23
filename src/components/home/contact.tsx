@@ -3,7 +3,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CONTACT_CARDS, MAPS_EMBED_SRC } from "@/constants/contact";
-import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/animations";
+import {
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+  viewportOnce,
+} from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
 const accentStyles = {
@@ -15,7 +20,10 @@ const accentStyles = {
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 overflow-hidden bg-cream section-pad">
+    <section
+      id="contact"
+      className="scroll-mt-24 overflow-hidden bg-cream section-pad"
+    >
       <div className="container-cui">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-8">
           <motion.div
@@ -32,8 +40,9 @@ export function Contact() {
               Contact Us
             </h2>
             <p className="leading-relaxed text-muted">
-              Our specialized campus administrators are ready to respond to admissions
-              inquiries, organizational planning, or visitor credentials.
+              Our specialized campus administrators are ready to respond to
+              admissions inquiries, organizational planning, or visitor
+              credentials.
             </p>
           </motion.div>
 
@@ -56,14 +65,18 @@ export function Contact() {
                   >
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-4 text-lg font-bold text-ink">{card.title}</h3>
+                  <h3 className="mt-4 text-lg font-bold text-ink">
+                    {card.title}
+                  </h3>
                   <p className="mt-2 text-xs text-muted">{card.value}</p>
                   {card.meta && (
                     <p className="mt-1 text-[10px] text-muted">
                       {card.meta.includes("24 Hours") ? (
                         <>
                           Response SLA:{" "}
-                          <span className="font-semibold text-purple">24 Hours</span>
+                          <span className="font-semibold text-purple">
+                            24 Hours
+                          </span>
                         </>
                       ) : (
                         card.meta
@@ -78,7 +91,9 @@ export function Contact() {
                   {card.href ? (
                     <Link
                       href={card.href}
-                      target={card.href.startsWith("http") ? "_blank" : undefined}
+                      target={
+                        card.href.startsWith("http") ? "_blank" : undefined
+                      }
                       rel={
                         card.href.startsWith("http")
                           ? "noopener noreferrer"
