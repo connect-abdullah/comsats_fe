@@ -2,70 +2,80 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { SectionEyebrow } from "@/components/ui/section-eyebrow";
-import { AchievementStat } from "@/components/ui/achievement-stat";
+import { StatisticCard } from "@/components/ui/statistic-card";
 import { ABOUT_STATS } from "@/constants/stats";
-import { staggerContainer, fadeUp, viewportOnce } from "@/lib/animations";
+import { IMAGES } from "@/constants/images";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function AboutComsats() {
   return (
-    <section id="about" className="relative scroll-mt-28 overflow-hidden">
-      <div className="absolute inset-0">
-        <Image
-          src="/bg_image.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 scrim-photo" />
-      </div>
+    <section id="about" className="relative scroll-mt-24 overflow-hidden section-pad">
+      <Image
+        src={IMAGES.campus.overview}
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-purple/60" aria-hidden="true" />
+      <div className="absolute inset-0 bg-ink/20" aria-hidden="true" />
 
-      <div className="container-cui relative z-10 section-pad-lg">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-start lg:gap-20">
-          {/* Editorial narrative */}
+      <div className="container-cui relative z-10">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="flex flex-col gap-6"
+            className="space-y-6 lg:col-span-6"
           >
-            <motion.div variants={fadeUp}>
-              <SectionEyebrow tone="light">About COMSATS</SectionEyebrow>
-            </motion.div>
+            <motion.span
+              variants={fadeUp}
+              className="text-sm font-semibold tracking-wider text-white/80 uppercase"
+            >
+              About COMSATS University Islamabad
+            </motion.span>
             <motion.h2
               variants={fadeUp}
-              className="text-editorial text-white"
+              className="text-3xl font-bold leading-tight tracking-tight text-white md:text-5xl"
             >
-              A Leading Institution Advancing Education, Research &amp; Innovation
+              A Legacy of Academic and Research Prominence
             </motion.h2>
             <motion.p
               variants={fadeUp}
-              className="text-body-lg text-white/85"
+              className="text-lg leading-relaxed text-white/85"
             >
-              COMSATS University Islamabad is a leading institution dedicated to
-              advancing education, research and innovation. With a strong national
-              presence and global outlook, the university empowers students through
-              academic excellence, technological advancement and impactful research.
+              COMSATS University Islamabad stands as a pillar of intellectual rigor in
+              Pakistan. Recognized globally for excellence, our multi-campus framework
+              inspires scientific breakthroughs, technological prowess, and prepares
+              student cohorts for highly competitive futures.
+            </motion.p>
+            <motion.p
+              variants={fadeUp}
+              className="text-sm leading-relaxed text-white/75"
+            >
+              We connect local leadership with global educational networks, partnering
+              with top institutions to build academic ecosystems that drive the economy
+              and fuel transformative progress.
             </motion.p>
           </motion.div>
 
-          {/* Achievement panels */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="grid gap-4 sm:grid-cols-2"
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-6"
           >
             {ABOUT_STATS.map((stat) => (
-              <AchievementStat
+              <StatisticCard
                 key={stat.label}
                 value={stat.value}
                 label={stat.label}
-                variant="light"
+                subtitle={stat.subtitle}
+                helper={stat.helper}
+                icon={stat.icon}
               />
             ))}
           </motion.div>

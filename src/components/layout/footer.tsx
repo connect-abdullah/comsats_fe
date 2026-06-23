@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { GraduationCap, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import {
   FOOTER_COLUMNS,
   UNIVERSITY_INFO,
   COPYRIGHT,
 } from "@/constants/footer";
 import { SOCIAL_LINKS } from "@/constants/navigation";
+import { BrandLogo } from "@/components/ui/brand-logo";
 import { SocialButton } from "@/components/ui/social-button";
 
 export function Footer() {
@@ -17,9 +18,7 @@ export function Footer() {
           {/* University info */}
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl brand-gradient text-white">
-                <GraduationCap className="h-6 w-6" aria-hidden="true" />
-              </span>
+              <BrandLogo size={48} />
               <span className="text-base font-bold leading-tight">
                 {UNIVERSITY_INFO.name}
               </span>

@@ -1,38 +1,35 @@
-import { GraduationCap, BookOpen, Award } from "lucide-react";
-import type { AdmissionPathway } from "@/types";
+import { GraduationCap, BookOpenCheck, Microscope } from "lucide-react";
+import type { ProgramCard } from "@/types";
 
-export const ADMISSIONS_HEADLINE = "Why COMSATS University Islamabad?";
-
-export const ADMISSIONS_NARRATIVE =
-  "Ranked among Pakistan's leading universities, COMSATS University Islamabad combines rigorous academic standards with cutting-edge research, industry partnerships, and a vibrant campus community that prepares graduates for global success.";
-
-export const TRUST_BULLETS = [
-  "HEC recognized degree programs",
-  "Globally connected faculty and research",
-  "Strong graduate employment outcomes",
-  "Seven campuses across Pakistan",
-];
-
-export const ADMISSION_PATHWAYS: AdmissionPathway[] = [
+export const PROGRAM_CARDS: ProgramCard[] = [
   {
     icon: GraduationCap,
     title: "Undergraduate Programs",
     description:
-      "Build strong foundations with industry-relevant bachelor's degrees across engineering, sciences, business, and design.",
-    href: "#admissions",
+      "Inquire into outstanding bachelor's degrees covering computer science, business management, architecture, artificial intelligence, and physical sciences.",
+    badge: "4-YEAR DEGREES",
+    deadline: "Deadline: Jan 15, 2026",
+    ctaLabel: "Explore UG Options",
+    accent: "purple",
   },
   {
-    icon: BookOpen,
+    icon: BookOpenCheck,
     title: "Graduate Programs",
     description:
-      "Advance your expertise through master's programs blending rigorous coursework with cutting-edge research.",
-    href: "#admissions",
+      "Broaden your research and functional boundaries. Highly integrated post-graduate training mapped directly to commercial and global academic fields.",
+    badge: "2-YEAR MS / MBA",
+    deadline: "Deadline: Jan 28, 2026",
+    ctaLabel: "Explore GR Options",
+    accent: "blue",
   },
   {
-    icon: Award,
+    icon: Microscope,
     title: "PhD Programs",
     description:
-      "Push the boundaries of knowledge with doctoral research guided by globally recognized faculty.",
-    href: "#admissions",
+      "Drive original contributions to global science, high performance computing, cyber systems, nano-physics, and progressive architecture design.",
+    badge: "DOCTORAL STUDIES",
+    deadline: "Rolling Applications",
+    ctaLabel: "Explore Doctoral Paths",
+    accent: "amber",
   },
 ];

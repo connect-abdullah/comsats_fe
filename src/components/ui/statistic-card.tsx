@@ -1,23 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
 
 interface StatisticCardProps {
   value: string;
   label: string;
+  subtitle?: string;
+  helper?: string;
+  icon: LucideIcon;
 }
 
-export function StatisticCard({ value, label }: StatisticCardProps) {
+export function StatisticCard({
+  value,
+  label,
+  subtitle,
+  helper,
+  icon: Icon,
+}: StatisticCardProps) {
   return (
     <motion.div
       variants={fadeUp}
-      className="glass rounded-card p-6 text-center shadow-soft"
+      className="rounded-card border border-line bg-white p-8 transition-all duration-300 hover:shadow-soft"
     >
-      <p className="text-2xl font-bold leading-tight text-white sm:text-3xl">
-        {value}
-      </p>
-      <p className="mt-1 text-sm font-medium text-white/80">{label}</p>
+      <Icon className="mb-4 h-8 w-8 text-amber-500" aria-hidden="true" />
+      <p className="text-3xl font-bold text-ink">{value}</p>
+      <p className="mt-2 text-sm font-medium text-ink">{subtitle ?? label}</p>
+      {helper && <p className="mt-1 text-xs text-muted">{helper}</p>}
     </motion.div>
   );
 }

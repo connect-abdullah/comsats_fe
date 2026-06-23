@@ -16,61 +16,71 @@ export const SERVICES: ServiceItem[] = [
   {
     title: "Safety First",
     description:
-      "A secure, monitored campus with round-the-clock safety protocols for every student.",
+      "Comprehensive round-the-clock secured check-posts, digital entry checkpoints, and dedicated emergency response corps.",
     icon: ShieldCheck,
+    accent: "purple",
   },
   {
     title: "Regular Classes",
     description:
-      "A consistent academic calendar that keeps learning on track all year long.",
+      "Structured semesters and highly punctual schedules mapped to standard academic parameters.",
     icon: CalendarClock,
+    accent: "blue",
   },
   {
     title: "Highly Qualified Teachers",
     description:
-      "Learn from PhD faculty and industry experts driving research and innovation.",
+      "Learn from professors trained directly inside prestigious international institutions and research labs.",
     icon: GraduationCap,
+    accent: "amber",
   },
   {
     title: "Modern Classrooms",
     description:
-      "Smart, technology-enabled classrooms designed for interactive learning.",
+      "Fitted with smart screens, theater audio, active cooling, and comfortable ergonomic seating.",
     icon: Presentation,
+    accent: "emerald",
   },
   {
     title: "Cafeteria",
     description:
-      "Hygienic, diverse dining options to fuel your day on campus.",
+      "Hygienic campus eateries serving fresh national delicacies, modern espresso bars, and active dining halls.",
     icon: Coffee,
+    accent: "rose",
   },
   {
     title: "Transport",
     description:
-      "Reliable transport routes connecting students across Islamabad.",
+      "Extensive fleet of buses traversing all prominent routes in Islamabad and Rawalpindi continuously.",
     icon: Bus,
+    accent: "cyan",
   },
   {
     title: "Sports Facilities",
     description:
-      "Indoor and outdoor sports arenas promoting health and team spirit.",
+      "Lush green football stadiums, modern tennis courts, indoor gymnasium complexes, and track regions.",
     icon: Trophy,
+    accent: "purple",
   },
   {
     title: "State-of-the-Art Labs",
     description:
-      "Advanced laboratories equipped for hands-on experimentation.",
+      "NVIDIA computing rigs, heavy electric grid testing apparatus, bio-genetic modules, and chemical structures testing.",
     icon: FlaskConical,
+    accent: "teal",
   },
   {
     title: "Student Support Services",
     description:
-      "Counseling, guidance and academic support whenever you need it.",
+      "Dedicated assistance counseling desk aiding mental healthcare, stress regulation, and vocational pathways.",
     icon: LifeBuoy,
+    accent: "orange",
   },
   {
     title: "Research Facilities",
     description:
-      "Dedicated research centers powering breakthrough discoveries.",
+      "Highly optimized workspace setups, computational server corridors, and extensive subscription credentials.",
     icon: Microscope,
+    accent: "indigo",
   },
 ];

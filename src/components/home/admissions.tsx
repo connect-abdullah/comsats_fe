@@ -1,125 +1,143 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { SectionEyebrow } from "@/components/ui/section-eyebrow";
-import { PrimaryButton } from "@/components/ui/primary-button";
-import { SecondaryButton } from "@/components/ui/secondary-button";
-import {
-  ADMISSIONS_HEADLINE,
-  ADMISSIONS_NARRATIVE,
-  ADMISSION_PATHWAYS,
-  TRUST_BULLETS,
-} from "@/constants/admissions";
+import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { SectionContainer } from "@/components/ui/section-container";
+import { PROGRAM_CARDS } from "@/constants/admissions";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
+import { cn } from "@/lib/utils";
+
+const accentStyles = {
+  purple: {
+    icon: "bg-purple/5 text-purple group-hover:bg-purple group-hover:text-white",
+    badge: "bg-purple/10 text-purple",
+    link: "text-blue",
+  },
+  blue: {
+    icon: "bg-blue/5 text-blue group-hover:bg-blue group-hover:text-white",
+    badge: "bg-blue/10 text-blue",
+    link: "text-blue",
+  },
+  amber: {
+    icon: "bg-amber-500/5 text-amber-600 group-hover:bg-amber-500 group-hover:text-white",
+    badge: "bg-amber-500/10 text-amber-600",
+    link: "text-blue",
+  },
+} as const;
 
 export function Admissions() {
   return (
-    <section id="admissions" className="section-pad scroll-mt-28 bg-white">
-      <div className="container-cui">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left: trust narrative + photo */}
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-            className="flex flex-col gap-8"
-          >
-            <div>
-              <SectionEyebrow>Admissions</SectionEyebrow>
-              <h2 className="text-section-title mt-4 text-ink">
-                {ADMISSIONS_HEADLINE}
-              </h2>
-              <p className="text-body-lg mt-5 text-muted">{ADMISSIONS_NARRATIVE}</p>
-            </div>
-
-            <ul className="flex flex-col gap-3">
-              {TRUST_BULLETS.map((bullet) => (
-                <motion.li
-                  key={bullet}
-                  variants={fadeUp}
-                  className="flex items-start gap-3 text-sm font-medium text-ink sm:text-base"
-                >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue" aria-hidden="true" />
-                  {bullet}
-                </motion.li>
-              ))}
-            </ul>
-
-            <motion.div
-              variants={fadeUp}
-              className="relative aspect-[4/3] overflow-hidden rounded-section shadow-feature"
-            >
-              <Image
-                src="/campus_life/student_affairs.jpg"
-                alt="Students at COMSATS University Islamabad"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </motion.div>
-          </motion.div>
-
-          {/* Right: stacked pathway panels */}
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-            className="flex flex-col gap-4"
-          >
-            {ADMISSION_PATHWAYS.map((pathway) => {
-              const Icon = pathway.icon;
-              return (
-                <motion.div
-                  key={pathway.title}
-                  variants={fadeUp}
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                  className="group flex gap-5 rounded-card border border-line bg-surface p-6 shadow-card transition-shadow duration-300 hover:shadow-lift sm:p-8"
-                >
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-purple text-white shadow-achievement">
-                    <Icon className="h-7 w-7" aria-hidden="true" />
-                  </span>
-                  <div className="flex flex-1 flex-col gap-2">
-                    <h3 className="text-xl font-semibold text-ink">{pathway.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted">
-                      {pathway.description}
-                    </p>
-                    <Link
-                      href={pathway.href ?? "#admissions"}
-                      className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-purple transition-colors group-hover:text-blue"
-                    >
-                      Learn more
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                    </Link>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-
-        {/* Action rail */}
+    <SectionContainer id="admissions" className="bg-surface">
+      <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
         <motion.div
-          variants={fadeUp}
+          variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="mt-14 flex flex-wrap items-center justify-center gap-4 border-t border-line pt-12"
+          className="space-y-6 lg:sticky lg:top-32 lg:col-span-5"
         >
-          <PrimaryButton href="#admissions" className="px-10 py-4 text-lg">
-            Apply Now
-          </PrimaryButton>
-          <SecondaryButton href="#admissions">How To Apply</SecondaryButton>
-          <SecondaryButton href="#admissions" tone="ghost">
-            Fee Structure
-          </SecondaryButton>
+          <motion.span
+            variants={fadeUp}
+            className="text-sm font-semibold tracking-wider text-purple uppercase"
+          >
+            Admissions &amp; Futures
+          </motion.span>
+          <motion.h2
+            variants={fadeUp}
+            className="text-3xl font-bold leading-tight tracking-tight text-ink md:text-5xl"
+          >
+            Start Your <br />
+            Journey With Us
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            className="text-lg leading-relaxed text-muted"
+          >
+            COMSATS University Islamabad prepares elite candidates for transformative
+            roles. Explore admissions timelines, program frameworks, and apply to join
+            a network of elite scholars.
+          </motion.p>
+
+          <motion.div variants={fadeUp} className="flex flex-col gap-3 pt-4">
+            <Link
+              href="#admissions"
+              className="inline-flex items-center justify-between rounded-xl bg-purple px-6 py-4 font-semibold text-white shadow-lg shadow-purple/20 transition-colors hover:bg-blue"
+            >
+              <span>Start Online Application</span>
+              <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+            </Link>
+            <div className="grid grid-cols-2 gap-3">
+              <Link
+                href="#admissions"
+                className="rounded-xl border border-line bg-white px-4 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-surface"
+              >
+                How to Apply
+              </Link>
+              <Link
+                href="#admissions"
+                className="rounded-xl border border-line bg-white px-4 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-surface"
+              >
+                Fee Structure
+              </Link>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="space-y-6 lg:col-span-7"
+        >
+          {PROGRAM_CARDS.map((card) => {
+            const Icon = card.icon;
+            const styles = accentStyles[card.accent];
+            return (
+              <motion.div
+                key={card.title}
+                variants={fadeUp}
+                className="group rounded-card border border-line/60 bg-white p-8 shadow-soft transition-all duration-500 hover:border-purple md:p-10"
+              >
+                <div className="flex items-start justify-between">
+                  <div
+                    className={cn(
+                      "flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300",
+                      styles.icon,
+                    )}
+                  >
+                    <Icon className="h-7 w-7" aria-hidden="true" />
+                  </div>
+                  <span
+                    className={cn(
+                      "rounded-pill px-3 py-1 text-xs font-bold tracking-wider uppercase",
+                      styles.badge,
+                    )}
+                  >
+                    {card.badge}
+                  </span>
+                </div>
+                <h3 className="mt-6 text-2xl font-bold text-ink">{card.title}</h3>
+                <p className="mt-4 leading-relaxed text-muted">{card.description}</p>
+                <div className="mt-8 flex items-center justify-between border-t border-line pt-6">
+                  <Link
+                    href="#admissions"
+                    className={cn(
+                      "inline-flex items-center gap-1 text-sm font-semibold transition-transform group-hover:translate-x-1",
+                      styles.link,
+                    )}
+                  >
+                    {card.ctaLabel}
+                    <ChevronRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                  <span className="text-xs text-muted">{card.deadline}</span>
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
-    </section>
+    </SectionContainer>
   );
 }

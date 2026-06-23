@@ -1,124 +1,114 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { SectionEyebrow } from "@/components/ui/section-eyebrow";
-import { AchievementStat } from "@/components/ui/achievement-stat";
-import { PrimaryButton } from "@/components/ui/primary-button";
-import { LIBRARY_STATS, LIBRARY_RESOURCES } from "@/constants/library";
-import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
+import { ArrowUpRight } from "lucide-react";
+import { fadeUp, fadeIn, staggerContainer, viewportOnce } from "@/lib/animations";
+import { cn } from "@/lib/utils";
+import { IMAGES } from "@/constants/images";
+
+const LIBRARY_STATS = [
+  { value: "150,000+", label: "Print Volumes", color: "text-purple" },
+  { value: "50,000+", label: "E-Journals", color: "text-blue" },
+  { value: "24/7", label: "Digital Access", color: "text-amber-600" },
+];
 
 export function Library() {
   return (
-    <section id="library" className="section-pad scroll-mt-28 bg-institutional">
+    <section id="library" className="scroll-mt-24 overflow-hidden section-pad">
       <div className="container-cui">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left: gallery + stats */}
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="flex flex-col gap-6"
+            className="space-y-6 lg:col-span-7"
           >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-section shadow-feature">
-              <Image
-                src="/Junaid_Zaidi_Library.jpg"
-                alt="Junaid Zaidi Library exterior"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              <div className="relative aspect-square overflow-hidden rounded-card shadow-card">
-                <Image
-                  src="/academic/course-catalog.jpg"
-                  alt="Library resources"
-                  fill
-                  sizes="150px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-card shadow-card">
-                <Image
-                  src="/academic/center_and_offices.jpg"
-                  alt="Research support"
-                  fill
-                  sizes="150px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-card shadow-card">
-                <Image
-                  src="/academic/faculties_and_departments.jpg"
-                  alt="Study spaces"
-                  fill
-                  sizes="150px"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-3">
+            <motion.span
+              variants={fadeUp}
+              className="text-sm font-semibold tracking-wider text-purple uppercase"
+            >
+              Academic Treasury
+            </motion.span>
+            <motion.h2
+              variants={fadeUp}
+              className="text-3xl font-bold leading-tight tracking-tight text-ink sm:text-4xl lg:text-5xl"
+            >
+              Junaid Zaidi Library
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              className="text-base leading-relaxed text-muted sm:text-lg"
+            >
+              The Junaid Zaidi Library serves as a vital part of COMSATS University
+              Islamabad&apos;s academic mission. It provides access to extensive print and
+              digital resources, supports curriculum requirements, and offers an environment
+              that encourages learning, research, and intellectual growth.
+            </motion.p>
+            <motion.p
+              variants={fadeUp}
+              className="text-sm leading-relaxed text-muted"
+            >
+              The library delivers customized information services tailored to the needs of
+              students, faculty, and researchers. With quiet study areas, high-speed
+              computational research hubs, and vast databases of digital publications, the
+              library acts as an active catalyst for academic discovery.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="grid grid-cols-3 gap-3 pt-2 sm:gap-6 sm:pt-4"
+            >
               {LIBRARY_STATS.map((stat) => (
-                <AchievementStat
-                  key={stat.label}
-                  value={stat.value}
-                  label={stat.label}
-                  variant="light"
-                  className="p-4 sm:p-5"
-                />
+                <div key={stat.label} className="min-w-0">
+                  <span
+                    className={cn(
+                      "block text-2xl font-bold sm:text-3xl",
+                      stat.color,
+                    )}
+                  >
+                    {stat.value}
+                  </span>
+                  <span className="mt-1 block text-xs text-muted">{stat.label}</span>
+                </div>
               ))}
-            </div>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="pt-2">
+              <Link
+                href="#library"
+                className="inline-flex items-center text-sm font-semibold text-purple transition-colors hover:text-blue"
+              >
+                Launch Library OPAC Search
+                <ArrowUpRight className="ml-1 h-4 w-4 shrink-0" aria-hidden="true" />
+              </Link>
+            </motion.div>
           </motion.div>
 
-          {/* Right: narrative + resources */}
           <motion.div
-            variants={staggerContainer}
+            variants={fadeIn}
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="flex flex-col gap-8"
+            className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none"
           >
-            <div>
-              <SectionEyebrow>Library</SectionEyebrow>
-              <h2 className="text-section-title mt-4 text-ink">
-                Junaid Zaidi Library
-              </h2>
-              <p className="text-body-lg mt-5 text-muted">
-                The Junaid Zaidi Library serves as a vital part of COMSATS University
-                Islamabad&apos;s academic mission. It provides access to extensive print
-                and digital resources, supports curriculum requirements, and offers an
-                environment that encourages learning, research, and intellectual growth.
-              </p>
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 translate-x-3 translate-y-3 rounded-[28px] border-2 border-purple/40 bg-purple/10 sm:translate-x-4 sm:translate-y-4"
+            />
+            <div className="relative overflow-hidden rounded-card shadow-lift">
+              <div className="relative aspect-[4/3] w-full sm:aspect-[4/5]">
+                <Image
+                  src={IMAGES.library.junaidZaidi}
+                  alt="Junaid Zaidi Library at COMSATS University Islamabad"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 40vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
             </div>
-
-            <div className="flex flex-col gap-4">
-              {LIBRARY_RESOURCES.map((resource) => {
-                const Icon = resource.icon;
-                return (
-                  <motion.div
-                    key={resource.title}
-                    variants={fadeUp}
-                    className="flex gap-4 rounded-card border border-line bg-white p-5 shadow-card transition-shadow hover:shadow-lift"
-                  >
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple/10 text-purple">
-                      <Icon className="h-6 w-6" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <h3 className="font-semibold text-ink">{resource.title}</h3>
-                      <p className="mt-1 text-sm leading-relaxed text-muted">
-                        {resource.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            <motion.div variants={fadeUp}>
-              <PrimaryButton href="#library">Visit the Library</PrimaryButton>
-            </motion.div>
           </motion.div>
         </div>
       </div>

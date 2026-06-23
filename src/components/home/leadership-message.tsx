@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { fadeUp, fadeIn, viewportOnce } from "@/lib/animations";
+import { IMAGES } from "@/constants/images";
 
 export function LeadershipMessage() {
   return (
-    <SectionContainer className="bg-surface">
+    <SectionContainer className="overflow-hidden bg-surface">
       <div className="grid items-center gap-12 lg:grid-cols-5">
         {/* Image: 40% */}
         <motion.div
@@ -16,21 +17,27 @@ export function LeadershipMessage() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="lg:col-span-2"
+          className="relative mx-auto w-full max-w-md lg:col-span-2 lg:max-w-none"
         >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-image shadow-lift">
-            <Image
-              src="/Dr_Raheel_Qamar.jpg"
-              alt="Prof. Dr. Raheel Qamar, Director"
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-6">
-              <p className="text-lg font-semibold text-white">
-                Prof. Dr. Raheel Qamar
-              </p>
-              <p className="text-sm text-white/80">Director</p>
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 -translate-x-3 translate-y-3 rounded-[28px] border-2 border-purple/40 bg-purple/10 sm:-translate-x-4 sm:translate-y-4"
+          />
+          <div className="relative overflow-hidden rounded-card shadow-lift">
+            <div className="relative aspect-[4/5] w-full">
+              <Image
+                src={IMAGES.leadership.director}
+                alt="Prof. Dr. Raheel Qamar, Director"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-6">
+                <p className="text-lg font-semibold text-white">
+                  Prof. Dr. Raheel Qamar
+                </p>
+                <p className="text-sm text-white/80">Director</p>
+              </div>
             </div>
           </div>
         </motion.div>

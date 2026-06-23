@@ -1,42 +1,68 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
-import { SectionHeader } from "@/components/ui/section-header";
-import { ContentCard } from "@/components/ui/content-card";
-import { SecondaryButton } from "@/components/ui/secondary-button";
+import { EditorialCard } from "@/components/ui/editorial-card";
 import { LATEST_NEWS } from "@/constants/news";
-import { staggerContainer, viewportOnce } from "@/lib/animations";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function LatestNews() {
   return (
     <SectionContainer id="news">
-      <SectionHeader label="Newsroom" heading="Latest News" />
+      <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+        >
+          <span className="text-sm font-semibold tracking-wider text-purple uppercase">
+            Announcements &amp; News
+          </span>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink md:text-5xl">
+            Latest News
+          </h2>
+        </motion.div>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+        >
+          <Link
+            href="#news"
+            className="inline-flex items-center text-sm font-semibold text-blue transition-colors hover:text-purple"
+          >
+            Explore More COMSATS News
+            <ArrowUpRight className="ml-1 h-5 w-5" aria-hidden="true" />
+          </Link>
+        </motion.div>
+      </div>
 
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {LATEST_NEWS.map((item) => (
-          <ContentCard
+          <EditorialCard
             key={item.title}
+            variant="news"
             image={item.image}
             title={item.title}
+            description={item.description}
             date={item.date}
-            ctaLabel="Read More"
+            category={item.category}
+            categoryColor={item.categoryColor}
+            ctaLabel="Read Entire Story"
             href={item.href}
           />
         ))}
       </motion.div>
-
-      <div className="mt-10 flex justify-center">
-        <SecondaryButton href="#news" variant="ghost">
-          Explore More COMSATS News
-        </SecondaryButton>
-      </div>
     </SectionContainer>
   );
 }

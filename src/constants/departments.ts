@@ -14,54 +14,57 @@ export const DEPARTMENTS: Department[] = [
   {
     name: "Computer Science",
     icon: Cpu,
-    featured: true,
-    image: "/academic/faculties_and_departments.jpg",
     description:
-      "Pioneering software engineering, artificial intelligence, and computational research at the forefront of Pakistan's tech revolution.",
+      "Software Engineering, Cybersecurity, Data Science, & Artificial Intelligence frameworks.",
+    accent: "purple",
   },
   {
     name: "Electrical Engineering",
     icon: Zap,
-    image: "/academic/center_and_offices.jpg",
-    description: "Power systems, electronics, and embedded technologies.",
+    description:
+      "Power Systems, Telecommunications, Smart Grids, & hardware design infrastructure.",
+    accent: "blue",
   },
   {
     name: "Architecture",
     icon: Building2,
-    image: "/campus_life/student_service_center.jpg",
-    description: "Design studios shaping the built environment.",
+    description:
+      "Sustainable urban architecture, physical design modeling, and modern landscape structures.",
+    accent: "amber",
   },
   {
     name: "Art & Design",
     icon: Palette,
-    image: "/campus_life/student_affairs.jpg",
-    description: "Creative expression and visual communication.",
+    description:
+      "Visual arts, media design, digital content production, and cultural preservation pathways.",
+    accent: "emerald",
   },
   {
     name: "Management Sciences",
     icon: Briefcase,
-    image: "/academic/course-catalog.jpg",
-    description: "Business leadership and strategic management.",
+    description:
+      "Global trade administration, fintech operations, business strategy, & creative branding.",
+    accent: "rose",
   },
   {
     name: "Mathematics",
     icon: Sigma,
-    image: "/academic/faculties_and_departments.jpg",
-    description: "Pure and applied mathematical sciences.",
+    description:
+      "Statistical calculation, quantum mechanics mapping, algorithms, and analytical theory modeling.",
+    accent: "indigo",
   },
   {
     name: "Physics",
     icon: Atom,
-    image: "/campus_life/sports_wellness.jpg",
-    description: "Fundamental research and applied physics.",
+    description:
+      "Applied physics, quantum systems, materials science, and advanced laboratory research.",
+    accent: "cyan",
   },
   {
     name: "Chemistry",
     icon: FlaskConical,
-    image: "/campus_life/health-care.jpg",
-    description: "Materials science and chemical research.",
+    description:
+      "Organic synthesis, analytical chemistry, environmental science, and industrial applications.",
+    accent: "teal",
   },
 ];
-
-export const FEATURED_DEPARTMENT = DEPARTMENTS.find((d) => d.featured)!;
-export const SUPPORTING_DEPARTMENTS = DEPARTMENTS.filter((d) => !d.featured);

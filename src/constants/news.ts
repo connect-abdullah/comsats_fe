@@ -1,25 +1,35 @@
+import { IMAGES } from "@/constants/images";
 import type { ContentItem } from "@/types";
 
 export const LATEST_NEWS: ContentItem[] = [
   {
-    title:
-      "COMSATS Researchers Win National Award for AI Innovation",
-    image: "/academic/center_and_offices.jpg",
-    date: "June 12, 2026",
+    title: "COMSATS Faculty Wins Prestigious HEC Research Award",
+    description:
+      "The High Commission honors CUI's top AI lab for path-breaking neural grid innovations.",
+    image: IMAGES.academic.centersAndOffices,
+    date: "October 14, 2026",
+    category: "RESEARCH",
+    categoryColor: "purple",
     href: "#news",
   },
   {
-    title:
-      "Islamabad Campus Hosts International Conference on Emerging Technologies",
-    image: "/academic/faculties_and_departments.jpg",
-    date: "May 28, 2026",
+    title: "International AI Symposium 2026 Begins",
+    description:
+      "CUI hosts elite minds from 15+ global universities to map next-gen deep-tech standards.",
+    image: IMAGES.academic.facultiesAndDepartments,
+    date: "October 08, 2026",
+    category: "ACADEMIC CAMPUS",
+    categoryColor: "blue",
     href: "#news",
   },
   {
-    title:
-      "Record Number of Graduates Placed in Top Global Companies",
-    image: "/campus_life/student_service_center.jpg",
-    date: "May 9, 2026",
+    title: "Fall Corporate Placement Program Records 94% Match",
+    description:
+      "Leading global companies lock outstanding talent directly from our graduating class.",
+    image: IMAGES.campusLife.studentServiceCenter,
+    date: "September 29, 2026",
+    category: "PLACEMENTS",
+    categoryColor: "purple",
     href: "#news",
   },
 ];

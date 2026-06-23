@@ -1,32 +1,41 @@
+import { IMAGES } from "@/constants/images";
 import type { ContentItem } from "@/types";
 
 export const UPCOMING_EVENTS: ContentItem[] = [
   {
-    title: "Student Week 2026",
+    title: "CUI National Cyber Cryptography Hackathon",
     description:
-      "A week-long celebration of student talent, culture and creativity.",
-    image: "/media-insights/student_week_1.png",
-    date: "July 4, 2026",
+      "An intense challenge mapping modern encryption protocols and secure database designs.",
+    image: IMAGES.mediaInsights.studentWeek,
+    date: "OCTOBER 21, 2026",
+    category: "CYBER SECURITY",
+    categoryColor: "purple",
   },
   {
-    title: "Sports Week 2026",
+    title: "Islamabad Architecture Exhibition",
     description:
-      "Inter-departmental tournaments fostering health and team spirit.",
-    image: "/media-insights/sports_week_2.png",
-    date: "July 18, 2026",
+      "Highlighting futuristic urban micro-housing plans curated by students and top sector guilds.",
+    image: IMAGES.mediaInsights.sportsWeek,
+    date: "NOVEMBER 04, 2026",
+    category: "CREATIVE DESIGN",
+    categoryColor: "blue",
   },
   {
-    title: "Qawali Night 2026",
+    title: "Graduate Research Exposition",
     description:
-      "An evening of soulful music celebrating culture and community.",
-    image: "/media-insights/qawali_night_2026.png",
-    date: "August 2, 2026",
+      "Showcasing progressive research in biotechnology, computer hardware, and applied sciences.",
+    image: IMAGES.mediaInsights.qawaliNight,
+    date: "NOVEMBER 12, 2026",
+    category: "GRADUATE THESIS",
+    categoryColor: "purple",
   },
   {
-    title: "Heroes of the Mountains",
+    title: "Heroes of the Mountains Screening",
     description:
-      "A documentary screening honoring resilience and adventure.",
-    image: "/media-insights/heros_of_the_mountains.png",
-    date: "August 20, 2026",
+      "A cinematic student documentative expedition through the Karakoram peak ranges.",
+    image: IMAGES.mediaInsights.heroesOfMountains,
+    date: "DECEMBER 05, 2026",
+    category: "ADVENTURE",
+    categoryColor: "blue",
   },
 ];

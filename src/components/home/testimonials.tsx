@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { SectionEyebrow } from "@/components/ui/section-eyebrow";
+import { SectionHeader } from "@/components/ui/section-header";
 import { Marquee } from "@/components/ui/marquee";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { TESTIMONIALS } from "@/constants/testimonials";
+import { IMAGES } from "@/constants/images";
 
 export function Testimonials() {
   const mid = Math.ceil(TESTIMONIALS.length / 2);
@@ -10,44 +11,42 @@ export function Testimonials() {
   const rowTwo = TESTIMONIALS.slice(mid);
 
   return (
-    <section className="relative scroll-mt-28 overflow-hidden">
+    <section className="relative scroll-mt-24 overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/bg_image.jpg"
+          src={IMAGES.campus.overview}
           alt=""
           fill
           sizes="100vw"
           className="object-cover"
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-ink/88" />
+        <div className="absolute inset-0 bg-ink/[0.85]" />
       </div>
 
-      <div className="relative z-10 section-pad-lg">
-        <div className="container-cui mb-14">
-          <SectionEyebrow tone="light">Student Voices</SectionEyebrow>
-          <h2 className="text-section-title mt-4 max-w-xl text-white">
-            What Our Students Say
-          </h2>
-          <p className="text-body-lg mt-5 max-w-2xl text-white/75">
-            Hear from the students whose journeys were shaped at COMSATS University
-            Islamabad.
-          </p>
+      <div className="relative z-10 section-pad">
+        <div className="container-cui">
+          <SectionHeader
+            label="Testimonials"
+            heading="What Our Students Say"
+            description="Hear from the students whose journeys were shaped at COMSATS University Islamabad."
+            tone="light"
+            align="center"
+            className="px-0"
+          />
         </div>
 
-        <div className="flex flex-col gap-8">
-          <Marquee duration={60} gap="2rem" fade pauseOnHover direction="left">
+        <div className="mt-10 flex flex-col gap-4 sm:mt-14 sm:gap-6">
+          <Marquee duration={55} gap="1rem" className="sm:[--marquee-gap:1.5rem]">
             {rowOne.map((t) => (
               <TestimonialCard key={t.name} {...t} />
             ))}
           </Marquee>
-          <div className="translate-y-2">
-            <Marquee duration={70} gap="2rem" fade pauseOnHover direction="right">
-              {rowTwo.map((t) => (
-                <TestimonialCard key={t.name} {...t} />
-              ))}
-            </Marquee>
-          </div>
+          <Marquee duration={65} gap="1rem" className="sm:[--marquee-gap:1.5rem]">
+            {rowTwo.map((t) => (
+              <TestimonialCard key={t.name} {...t} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>
