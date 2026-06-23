@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+/* ============================================================
+   COMSATS INSTITUTIONAL DESIGN SYSTEM
+   ============================================================ */
+
+@theme {
+  /* Brand colors */
+  --color-purple: #4c227b;
+  --color-purple-600: #3d1b63;
+  --color-purple-400: #6a3aa3;
+  --color-blue: #0f5ea6;
+  --color-blue-600: #0c4a83;
+  --color-blue-400: #2d7cc4;
+
+  --color-ink: #14111c;
+  --color-muted: #5b5670;
+  --color-line: #e8e4ef;
+  --color-surface: #f5f3f8;
+  --color-institutional: #faf9fc;
+
+  /* Border radius */
+  --radius-card: 24px;
+  --radius-image: 24px;
+  --radius-section: 32px;
+  --radius-dock: 20px;
+  --radius-pill: 999px;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* Elevation system */
+  --shadow-dock: 0 8px 32px -8px rgba(20, 17, 28, 0.12), 0 2px 8px -2px rgba(20, 17, 28, 0.06);
+  --shadow-dock-scrolled: 0 16px 48px -12px rgba(20, 17, 28, 0.18), 0 4px 12px -4px rgba(20, 17, 28, 0.08);
+  --shadow-card: 0 4px 24px -4px rgba(20, 17, 28, 0.1);
+  --shadow-feature: 0 24px 64px -16px rgba(20, 17, 28, 0.22);
+  --shadow-achievement: 0 12px 40px -8px rgba(76, 34, 123, 0.15);
+  --shadow-soft: 0 10px 40px -12px rgba(28, 17, 51, 0.18);
+  --shadow-lift: 0 24px 60px -16px rgba(28, 17, 51, 0.28);
+  --shadow-glow: 0 18px 50px -10px rgba(76, 34, 123, 0.45);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #14111c;
+  --scrim-dark: linear-gradient(
+    180deg,
+    rgba(20, 17, 28, 0.35) 0%,
+    rgba(20, 17, 28, 0.75) 55%,
+    rgba(20, 17, 28, 0.92) 100%
+  );
+  --scrim-photo: linear-gradient(
+    105deg,
+    rgba(20, 17, 28, 0.88) 0%,
+    rgba(20, 17, 28, 0.55) 45%,
+    rgba(15, 94, 166, 0.45) 100%
+  );
+  --scrim-photo-bottom: linear-gradient(
+    to top,
+    rgba(20, 17, 28, 0.92) 0%,
+    rgba(20, 17, 28, 0.4) 50%,
+    transparent 100%
+  );
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ----- Typography scale ----- */
+.text-display {
+  font-size: clamp(2.5rem, 5vw + 1rem, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.text-editorial {
+  font-size: clamp(2rem, 3vw + 0.5rem, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.text-section-title {
+  font-size: clamp(1.75rem, 2vw + 0.5rem, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/* ----- Layout ----- */
+.container-cui {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-cui {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-cui {
+    padding-inline: 4rem;
+  }
+}
+
+.section-pad {
+  padding-block: 72px;
+}
+
+.section-pad-lg {
+  padding-block: 96px;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-block: 96px;
+  }
+  .section-pad-lg {
+    padding-block: 128px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-block: 120px;
+  }
+  .section-pad-lg {
+    padding-block: 160px;
+  }
+}
+
+/* ----- Surfaces & scrims ----- */
+.scrim-dark {
+  background: var(--scrim-dark);
+}
+
+.scrim-photo {
+  background: var(--scrim-photo);
+}
+
+.scrim-photo-bottom {
+  background: var(--scrim-photo-bottom);
+}
+
+.brand-gradient {
+  background: linear-gradient(120deg, var(--color-purple) 0%, var(--color-blue) 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* ----- Marquee ----- */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - var(--marquee-gap, 1.5rem) / 2));
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  from {
+    transform: translateX(calc(-50% - var(--marquee-gap, 1.5rem) / 2));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee-track-reverse {
+  animation-name: marquee-scroll-reverse;
+}
+
+.marquee-paused:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Edge fade masks for marquees */
+.marquee-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+/* ----- Custom cursor zone (media section) ----- */
+.cursor-zone {
+  cursor: none;
+}
+
+.cursor-zone a,
+.cursor-zone button {
+  cursor: none;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor-zone,
+  .cursor-zone a,
+  .cursor-zone button {
+    cursor: pointer;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
