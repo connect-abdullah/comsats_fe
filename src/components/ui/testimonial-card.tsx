@@ -5,7 +5,7 @@ import type { Testimonial } from "@/types";
 
 export function TestimonialCard({ name, program, quote, image }: Testimonial) {
   return (
-    <figure className="flex h-full w-[min(100%,280px)] shrink-0 flex-col gap-4 rounded-card border border-white/10 bg-white/10 p-5 backdrop-blur-xl sm:w-[320px] sm:p-6 md:w-[380px]">
+    <figure className="flex h-full w-[260px] shrink-0 flex-col gap-4 rounded-card border border-white/10 bg-white/10 p-5 backdrop-blur-xl sm:w-[300px] sm:p-6 md:w-[360px]">
       <Quote className="h-7 w-7 text-blue-400" aria-hidden="true" />
       <blockquote className="flex-1 text-sm leading-relaxed text-white/90">
         “{quote}”

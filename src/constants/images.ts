@@ -16,6 +16,7 @@ export const IMAGES = {
     junaidZaidi: "/Junaid_Zaidi_Library.jpg",
   },
   academic: {
+    hero: "/academics.jpg",
     facultiesAndDepartments: "/academic/faculties_and_departments.jpg",
     centersAndOffices: "/academic/center_and_offices.jpg",
     courseCatalog: "/academic/course-catalog.jpg",
@@ -31,5 +32,16 @@ export const IMAGES = {
     sportsWeek: "/media-insights/sports_week_2.png",
     qawaliNight: "/media-insights/qawali_night_2026.png",
     heroesOfMountains: "/media-insights/heros_of_the_mountains.png",
+  },
+  aboutUs: {
+    about1: "/about_us/about_1.jpg",
+    about2: "/about_us/about_2.jpg",
+    about3: "/about_us/about_3.jpg",
+    parkingBuilding: "/about_us/parking_building.jpg",
+  },
+  admissions: {
+    hero: "/admission_hero.jpg",
+    faq: "/campus_life/student_service_center.jpg",
+    internationalStudents: "/campus_life/student_affairs.jpg",
   },
 } as const;

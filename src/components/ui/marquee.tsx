@@ -16,7 +16,7 @@ interface MarqueeProps {
 export function Marquee({
   children,
   duration = 40,
-  gap = "1.5rem",
+  gap = "1rem",
   className,
   pauseOnHover = true,
   direction = "left",
@@ -33,13 +33,14 @@ export function Marquee({
         pauseOnHover && "marquee-paused",
         className,
       )}
+      style={style}
     >
       <div
         className={cn(
           "marquee-track",
           direction === "right" && "marquee-track-reverse",
         )}
-        style={{ ...style, gap }}
+        style={{ gap }}
       >
         <div className="flex shrink-0" style={{ gap }}>
           {children}

@@ -149,7 +149,7 @@ body {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50% - var(--marquee-gap, 1.5rem) / 2));
+    transform: translateX(calc(-50% - var(--marquee-gap, 1rem) / 2));
   }
 }
 
@@ -157,6 +157,9 @@ body {
   display: flex;
   width: max-content;
   animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .marquee-track-reverse {
@@ -165,15 +168,17 @@ body {
 
 @keyframes marquee-scroll-reverse {
   from {
-    transform: translateX(calc(-50% - var(--marquee-gap, 1.5rem) / 2));
+    transform: translateX(calc(-50% - var(--marquee-gap, 1rem) / 2));
   }
   to {
     transform: translateX(0);
   }
 }
 
-.marquee-paused:hover .marquee-track {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .marquee-paused:hover .marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 /* ----- About bento grid ----- */

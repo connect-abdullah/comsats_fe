@@ -61,7 +61,7 @@ export function Admissions() {
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 pt-4">
             <Link
-              href="#admissions"
+              href="/admissions"
               className="inline-flex items-center justify-between rounded-xl bg-purple px-6 py-4 font-semibold text-white shadow-lg shadow-purple/20 transition-colors hover:bg-blue"
             >
               <span>Start Online Application</span>
@@ -69,13 +69,13 @@ export function Admissions() {
             </Link>
             <div className="grid grid-cols-2 gap-3">
               <Link
-                href="#admissions"
+                href="/admissions"
                 className="rounded-xl border border-line bg-white px-4 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-surface"
               >
                 How to Apply
               </Link>
               <Link
-                href="#admissions"
+                href="/admissions"
                 className="rounded-xl border border-line bg-white px-4 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-surface"
               >
                 Fee Structure
@@ -126,7 +126,7 @@ export function Admissions() {
                 </p>
                 <div className="mt-8 flex items-center justify-between border-t border-line pt-6">
                   <Link
-                    href="#admissions"
+                    href="/admissions"
                     className={cn(
                       "inline-flex items-center gap-1 text-sm font-semibold transition-transform group-hover:translate-x-1",
                       styles.link,

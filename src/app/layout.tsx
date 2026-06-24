@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans, Geist } from "next/font/google";
 import "./globals.css";
+import { SiteShell } from "@/components/layout/site-shell";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { IMAGES } from "@/constants/images";
 import { cn } from "@/lib/utils";
@@ -77,7 +78,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-white text-ink">
         <SmoothScroll />
-        {children}
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

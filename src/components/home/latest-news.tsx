@@ -32,7 +32,7 @@ export function LatestNews() {
           viewport={viewportOnce}
         >
           <Link
-            href="#news"
+            href="/news"
             className="inline-flex items-center text-sm font-semibold text-blue transition-colors hover:text-purple"
           >
             Explore More COMSATS News

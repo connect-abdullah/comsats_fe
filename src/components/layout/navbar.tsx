@@ -115,7 +115,7 @@ export function Navbar() {
           )}
         >
           <Link
-            href="#home"
+            href="/"
             className="flex items-center gap-3"
             aria-label="COMSATS University Islamabad home"
           >

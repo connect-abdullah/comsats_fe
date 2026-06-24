@@ -37,22 +37,12 @@ export function Testimonials() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4 sm:mt-14 sm:gap-6">
-          <Marquee
-            duration={55}
-            gap="1rem"
-            direction="right"
-            className="sm:[--marquee-gap:1.5rem]"
-          >
+          <Marquee duration={75} gap="1rem" direction="right">
             {rowOne.map((t) => (
               <TestimonialCard key={t.name} {...t} />
             ))}
           </Marquee>
-          <Marquee
-            duration={65}
-            gap="1rem"
-            direction="left"
-            className="sm:[--marquee-gap:1.5rem]"
-          >
+          <Marquee duration={85} gap="1rem" direction="left">
             {rowTwo.map((t) => (
               <TestimonialCard key={t.name} {...t} />
             ))}

@@ -128,7 +128,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
 
             <div className="mt-auto flex flex-col gap-5 pt-6">
               <Link
-                href="#admissions"
+                href="/admissions"
                 onClick={onClose}
                 className="inline-flex w-full items-center justify-center rounded-pill bg-purple px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue"
               >

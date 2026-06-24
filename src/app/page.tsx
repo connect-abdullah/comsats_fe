@@ -1,5 +1,3 @@
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
 import { MediaInsights } from "@/components/home/media-insights";
 import { Admissions } from "@/components/home/admissions";
@@ -19,25 +17,21 @@ import { Contact } from "@/components/home/contact";
 export default function HomePage() {
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <MediaInsights />
-        <Admissions />
-        <CampusLife />
-        <LeadershipMessage />
-        <LatestNews />
-        <AboutComsats />
-        <UpcomingEvents />
-        <AcademicDepartments />
-        <Academics />
-        <Services />
-        <UniversityCta />
-        <Library />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
+      <Hero />
+      <MediaInsights />
+      <Admissions />
+      <CampusLife />
+      <LeadershipMessage />
+      <LatestNews />
+      <AboutComsats />
+      <UpcomingEvents />
+      <AcademicDepartments />
+      <Academics />
+      <Services />
+      <UniversityCta />
+      <Library />
+      <Testimonials />
+      <Contact />
     </>
   );
 }

@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[900px] items-center overflow-hidden pt-26 pb-20 lg:h-screen"
+      className="relative flex min-h-screen items-center overflow-hidden pt-26 pb-20 lg:pt-32"
     >
       <Image
         src={IMAGES.hero.background}
@@ -79,7 +79,7 @@ export function Hero() {
             variants={fadeUp}
             className="flex w-full flex-wrap items-center gap-4 sm:w-auto"
           >
-            <Link href="#admissions" className="w-full sm:w-auto">
+            <Link href="/admissions" className="w-full sm:w-auto">
               <ShimmerButton
                 className="w-full px-7 py-3.5 text-base font-semibold shadow-glow sm:w-auto"
                 background="linear-gradient(120deg, #4c227b 0%, #0f5ea6 100%)"
@@ -91,7 +91,7 @@ export function Hero() {
               </ShimmerButton>
             </Link>
             <SecondaryButton
-              href="#academics"
+              href="/academics"
               variant="light"
               className="border-none w-full sm:w-auto"
             >
@@ -143,7 +143,7 @@ export function Hero() {
                 </h2>
               </div>
               <Link
-                href="#admissions"
+                href="/admissions"
                 aria-label="View admissions"
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple text-white transition-colors hover:bg-blue"
               >

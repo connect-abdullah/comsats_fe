@@ -17,8 +17,9 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: "POLs", href: "#" },
       { label: "Online SOPs", href: "#" },
       { label: "Degree Verification", href: "#" },
-      { label: "Undergraduate Admissions", href: "#admissions" },
-      { label: "Graduate Admissions", href: "#admissions" },
+      { label: "Undergraduate Admissions", href: "/admissions" },
+      { label: "Graduate Admissions", href: "/admissions" },
+      { label: "Admissions FAQ", href: "/admissions/faq" },
     ],
   },
   {
