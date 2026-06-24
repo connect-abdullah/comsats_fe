@@ -24,12 +24,20 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: "YouTube", href: "https://www.youtube.com", icon: YoutubeIcon },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@cuiofficial",
+    icon: YoutubeIcon,
+  },
   {
     label: "Instagram",
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/cuiofficial/",
     icon: InstagramIcon,
   },
-  { label: "Facebook", href: "https://www.facebook.com", icon: FacebookIcon },
-  { label: "Twitter / X", href: "https://twitter.com", icon: XIcon },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/cuiofficial/",
+    icon: FacebookIcon,
+  },
+  { label: "X", href: "https://x.com/cuiofficial", icon: XIcon },
 ];
