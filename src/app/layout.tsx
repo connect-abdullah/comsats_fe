@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Plus_Jakarta_Sans, Geist } from "next/font/google";
 import "./globals.css";
 import { SiteShell } from "@/components/layout/site-shell";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });

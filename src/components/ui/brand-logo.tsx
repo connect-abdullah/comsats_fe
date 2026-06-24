@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 
 interface BrandLogoProps {
   size?: number;

@@ -65,23 +65,27 @@ export function DepartmentCard({
     <motion.div
       variants={fadeUp}
       className={cn(
-        "group rounded-card border border-line/80 bg-white p-8 transition-all duration-300 hover:shadow-lg",
+        "group flex h-full min-w-0 flex-col overflow-hidden rounded-card border border-line/80 bg-white p-4 transition-all duration-300 hover:shadow-lg sm:p-6 lg:p-8",
         styles.hover,
       )}
     >
       <div
         className={cn(
-          "flex h-12 w-12 items-center justify-center rounded-xl transition-colors duration-300",
+          "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors duration-300 sm:h-12 sm:w-12",
           styles.icon,
         )}
       >
-        <Icon className="h-6 w-6" aria-hidden="true" />
+        <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
       </div>
-      <h3 className="mt-6 text-xl font-bold text-ink">{name}</h3>
-      <p className="mt-2 text-xs text-muted">{description}</p>
+      <h3 className="mt-3 line-clamp-2 text-sm font-bold leading-snug text-ink sm:mt-4 sm:text-base lg:text-xl">
+        {name}
+      </h3>
+      <p className="mt-2 line-clamp-3 overflow-hidden text-xs leading-snug text-muted">
+        {description}
+      </p>
       <Link
         href="#departments"
-        className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-blue transition-transform group-hover:translate-x-1"
+        className="mt-auto inline-flex shrink-0 items-center gap-1 pt-3 text-[11px] font-semibold text-blue transition-transform group-hover:translate-x-1 sm:text-xs"
       >
         Inquire Department
         <ChevronRight className="h-3 w-3" aria-hidden="true" />

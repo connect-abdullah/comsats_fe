@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
-import { PROGRAM_CARDS } from "@/constants/admissions";
+import { PROGRAM_CARDS } from "@/constants/home/admissions";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
@@ -89,55 +89,59 @@ export function Admissions() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="space-y-6 lg:col-span-7"
+          className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-2 snap-x snap-mandatory lg:mx-0 lg:flex lg:flex-col lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0 lg:col-span-7"
         >
           {PROGRAM_CARDS.map((card) => {
             const Icon = card.icon;
             const styles = accentStyles[card.accent];
             return (
-              <motion.div
+              <div
                 key={card.title}
-                variants={fadeUp}
-                className="group rounded-card border border-line/60 bg-white p-8 shadow-soft transition-all duration-500 hover:border-purple md:p-10"
+                className="w-[85vw] shrink-0 snap-center sm:w-[70vw] lg:w-auto lg:shrink"
               >
-                <div className="flex items-start justify-between">
-                  <div
-                    className={cn(
-                      "flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300",
-                      styles.icon,
-                    )}
-                  >
-                    <Icon className="h-7 w-7" aria-hidden="true" />
+                <motion.div
+                  variants={fadeUp}
+                  className="group h-full rounded-card border border-line/60 bg-white p-5 shadow-soft transition-all duration-500 hover:border-purple md:p-8 lg:p-10"
+                >
+                  <div className="flex items-start justify-between">
+                    <div
+                      className={cn(
+                        "flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300",
+                        styles.icon,
+                      )}
+                    >
+                      <Icon className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <span
+                      className={cn(
+                        "rounded-pill px-3 py-1 text-xs font-bold tracking-wider uppercase",
+                        styles.badge,
+                      )}
+                    >
+                      {card.badge}
+                    </span>
                   </div>
-                  <span
-                    className={cn(
-                      "rounded-pill px-3 py-1 text-xs font-bold tracking-wider uppercase",
-                      styles.badge,
-                    )}
-                  >
-                    {card.badge}
-                  </span>
-                </div>
-                <h3 className="mt-6 text-2xl font-bold text-ink">
-                  {card.title}
-                </h3>
-                <p className="mt-4 leading-relaxed text-muted">
-                  {card.description}
-                </p>
-                <div className="mt-8 flex items-center justify-between border-t border-line pt-6">
-                  <Link
-                    href="/admissions"
-                    className={cn(
-                      "inline-flex items-center gap-1 text-sm font-semibold transition-transform group-hover:translate-x-1",
-                      styles.link,
-                    )}
-                  >
-                    {card.ctaLabel}
-                    <ChevronRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                  <span className="text-xs text-muted">{card.deadline}</span>
-                </div>
-              </motion.div>
+                  <h3 className="mt-6 text-2xl font-bold text-ink">
+                    {card.title}
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-muted">
+                    {card.description}
+                  </p>
+                  <div className="mt-8 flex items-center justify-between border-t border-line pt-6">
+                    <Link
+                      href="/admissions"
+                      className={cn(
+                        "inline-flex items-center gap-1 text-sm font-semibold transition-transform group-hover:translate-x-1",
+                        styles.link,
+                      )}
+                    >
+                      {card.ctaLabel}
+                      <ChevronRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                    <span className="text-xs text-muted">{card.deadline}</span>
+                  </div>
+                </motion.div>
+              </div>
             );
           })}
         </motion.div>

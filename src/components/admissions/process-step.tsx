@@ -12,7 +12,10 @@ interface ProcessStepProps {
 
 export function ProcessStepComponent({ step, isLast }: ProcessStepProps) {
   return (
-    <motion.div variants={fadeUp} className="relative flex gap-6 pb-10 last:pb-0">
+    <motion.div
+      variants={fadeUp}
+      className="relative flex gap-6 pb-10 last:pb-0"
+    >
       {!isLast && (
         <div
           className="absolute left-5 top-12 h-[calc(100%-1rem)] w-0.5 bg-linear-to-b from-purple to-blue/30"

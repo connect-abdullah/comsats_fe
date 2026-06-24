@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { WHY_CHOOSE_COMSATS } from "@/constants/admissions-page";
+import { WHY_CHOOSE_COMSATS } from "@/constants/admissions/page";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function WhyChooseComsats() {
@@ -31,7 +31,9 @@ export function WhyChooseComsats() {
             <span className="text-2xl font-bold text-purple/20 sm:text-3xl">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-2 text-base font-bold text-ink sm:mt-3 sm:text-xl">{feature.title}</h3>
+            <h3 className="mt-2 text-base font-bold text-ink sm:mt-3 sm:text-xl">
+              {feature.title}
+            </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted sm:mt-3 sm:text-base">
               {feature.description}
             </p>

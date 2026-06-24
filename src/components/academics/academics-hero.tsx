@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { PrimaryButton } from "@/components/ui/primary-button";
 import { SecondaryButton } from "@/components/ui/secondary-button";
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function AcademicsHero() {
@@ -64,7 +64,9 @@ export function AcademicsHero() {
             variants={fadeUp}
             className="flex w-full flex-wrap items-center gap-4"
           >
-            <PrimaryButton href="#departments">Explore Departments</PrimaryButton>
+            <PrimaryButton href="#departments">
+              Explore Departments
+            </PrimaryButton>
             <SecondaryButton href="#course-catalogue" variant="light">
               View Programs
             </SecondaryButton>

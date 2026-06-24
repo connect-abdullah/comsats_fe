@@ -41,7 +41,9 @@ interface QuickActionCardComponentProps {
   action: QuickActionCard;
 }
 
-export function QuickActionCardComponent({ action }: QuickActionCardComponentProps) {
+export function QuickActionCardComponent({
+  action,
+}: QuickActionCardComponentProps) {
   const Icon = action.icon;
   const styles = accentStyles[action.accent];
   const isExternal = action.href.startsWith("http");
@@ -72,7 +74,9 @@ export function QuickActionCardComponent({ action }: QuickActionCardComponentPro
             aria-hidden="true"
           />
         </div>
-        <h3 className="mt-4 text-base font-bold text-ink sm:mt-5 sm:text-lg">{action.title}</h3>
+        <h3 className="mt-4 text-base font-bold text-ink sm:mt-5 sm:text-lg">
+          {action.title}
+        </h3>
         <p className="mt-2 flex-1 text-xs leading-relaxed text-muted line-clamp-2 sm:text-sm sm:line-clamp-none">
           {action.description}
         </p>

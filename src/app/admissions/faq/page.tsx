@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { FaqHero } from "@/components/admissions/faq-hero";
-import { FaqContent } from "@/components/admissions/faq-content";
+import { FaqHero } from "@/components/admissions/faq/faq-hero";
+import { FaqContent } from "@/components/admissions/faq/faq-content";
 
 export const metadata: Metadata = {
   title: "Admissions FAQ",

@@ -11,7 +11,11 @@ interface NewsCardProps {
   priority?: boolean;
 }
 
-export function NewsCard({ article, className, priority = false }: NewsCardProps) {
+export function NewsCard({
+  article,
+  className,
+  priority = false,
+}: NewsCardProps) {
   const monthShort = article.date.month.slice(0, 3).toUpperCase();
 
   return (

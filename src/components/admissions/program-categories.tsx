@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ProgramCategoryCard } from "@/components/admissions/program-category-card";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { PROGRAM_CATEGORIES } from "@/constants/admissions-page";
+import { PROGRAM_CATEGORIES } from "@/constants/admissions/page";
 import { staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function ProgramCategories() {

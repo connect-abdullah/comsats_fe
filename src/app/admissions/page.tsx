@@ -8,7 +8,7 @@ import { ImportantDatesTimeline } from "@/components/admissions/important-dates-
 import { WhyChooseComsats } from "@/components/admissions/why-choose-comsats";
 import { InternationalStudents } from "@/components/admissions/international-students";
 import { ScholarshipsSection } from "@/components/admissions/scholarships-section";
-import { FaqPreview } from "@/components/admissions/faq-preview";
+import { FaqPreview } from "@/components/admissions/faq/faq-preview";
 import { FinalCTA } from "@/components/admissions/final-cta";
 import { VideoTestimonials } from "@/components/home/video-testimonials";
 

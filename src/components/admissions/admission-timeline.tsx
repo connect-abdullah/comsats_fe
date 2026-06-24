@@ -61,7 +61,9 @@ function TimelineItem({
       <h4
         className={cn(
           "mt-3 font-bold leading-snug text-ink",
-          isMobile ? "max-w-[7rem] text-sm" : "mt-4 min-h-14 max-w-36 text-base sm:text-lg",
+          isMobile
+            ? "max-w-[7rem] text-sm"
+            : "mt-4 min-h-14 max-w-36 text-base sm:text-lg",
         )}
       >
         {event.title}
@@ -73,7 +75,10 @@ function TimelineItem({
   );
 }
 
-export function AdmissionTimeline({ events, className }: AdmissionTimelineProps) {
+export function AdmissionTimeline({
+  events,
+  className,
+}: AdmissionTimelineProps) {
   return (
     <motion.div
       variants={staggerContainer}

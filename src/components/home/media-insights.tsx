@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Marquee } from "@/components/ui/marquee";
-import { MEDIA_ITEMS } from "@/constants/media";
+import { MEDIA_ITEMS } from "@/constants/home/media";
 import type { MediaItem } from "@/types";
 
 const VideoModal = dynamic(

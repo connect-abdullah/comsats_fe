@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CounterCard } from "@/components/admissions/counter-card";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { ADMISSION_STATS } from "@/constants/admissions-page";
+import { ADMISSION_STATS } from "@/constants/admissions/page";
 import { staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function AdmissionsStatistics() {

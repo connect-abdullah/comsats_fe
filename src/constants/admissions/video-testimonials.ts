@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import type { VideoTestimonial } from "@/types";
 
 export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [

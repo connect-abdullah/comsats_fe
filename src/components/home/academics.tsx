@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
 import { EditorialCard } from "@/components/ui/editorial-card";
-import { ACADEMIC_CARDS } from "@/constants/academics";
+import { ACADEMIC_CARDS } from "@/constants/home/academics";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function Academics() {
@@ -29,18 +29,22 @@ export function Academics() {
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="grid gap-8 md:grid-cols-3"
+        className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-2 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 md:pb-0"
       >
         {ACADEMIC_CARDS.map((card) => (
-          <EditorialCard
+          <div
             key={card.title}
-            variant="academic"
-            image={card.image}
-            title={card.title}
-            description={card.description}
-            ctaLabel={card.ctaLabel}
-            href="#academics"
-          />
+            className="w-[85vw] shrink-0 snap-center sm:w-[70vw] md:w-auto md:shrink"
+          >
+            <EditorialCard
+              variant="academic"
+              image={card.image}
+              title={card.title}
+              description={card.description}
+              ctaLabel={card.ctaLabel}
+              href="#academics"
+            />
+          </div>
         ))}
       </motion.div>
     </SectionContainer>

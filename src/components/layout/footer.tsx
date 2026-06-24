@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { FOOTER_COLUMNS, UNIVERSITY_INFO, COPYRIGHT } from "@/constants/footer";
-import { SOCIAL_LINKS } from "@/constants/navigation";
+import { FOOTER_COLUMNS, UNIVERSITY_INFO, COPYRIGHT } from "@/constants/shared/footer";
+import { SOCIAL_LINKS } from "@/constants/shared/navigation";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { SocialButton } from "@/components/ui/social-button";
 

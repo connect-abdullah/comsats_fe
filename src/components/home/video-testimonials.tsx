@@ -7,7 +7,7 @@ import { VideoTestimonialCard } from "@/components/admissions/video-testimonial-
 import {
   VIDEO_TESTIMONIALS,
   VIDEO_TESTIMONIALS_SECTION,
-} from "@/constants/video-testimonials";
+} from "@/constants/admissions/video-testimonials";
 
 export function VideoTestimonials() {
   const mid = Math.ceil(VIDEO_TESTIMONIALS.length / 2);

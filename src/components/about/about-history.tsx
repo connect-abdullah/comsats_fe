@@ -4,14 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SecondaryButton } from "@/components/ui/secondary-button";
-import { ABOUT_HISTORY } from "@/constants/about-page";
+import { ABOUT_HISTORY } from "@/constants/about/page";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function AboutHistory() {
   return (
     <SectionContainer id="history" className="bg-white">
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-16">
-         <motion.div
+        <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
@@ -38,7 +38,7 @@ export function AboutHistory() {
             {ABOUT_HISTORY.ctaLabel}
           </SecondaryButton>
         </motion.div>
-        
+
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -62,8 +62,6 @@ export function AboutHistory() {
             </div>
           </div>
         </motion.div>
-
-       
       </div>
     </SectionContainer>
   );

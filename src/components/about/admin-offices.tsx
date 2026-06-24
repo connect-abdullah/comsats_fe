@@ -5,10 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import {
-  ADMIN_OFFICES,
-  ADMIN_OFFICES_SECTION,
-} from "@/constants/about-page";
+import { ADMIN_OFFICES, ADMIN_OFFICES_SECTION } from "@/constants/about/page";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function AdminOffices() {

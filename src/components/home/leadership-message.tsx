@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { fadeUp, fadeIn, viewportOnce } from "@/lib/animations";
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 
 export function LeadershipMessage() {
   return (

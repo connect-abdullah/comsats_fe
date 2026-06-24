@@ -33,7 +33,8 @@ export function FAQAccordion({
   const [internalOpenId, setInternalOpenId] = useState<string | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const openId = controlledOpenId !== undefined ? controlledOpenId : internalOpenId;
+  const openId =
+    controlledOpenId !== undefined ? controlledOpenId : internalOpenId;
   const useMultiple = allowMultiple || openIds.length > 0;
 
   const handleToggle = (id: string) => {

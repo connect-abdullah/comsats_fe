@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function NewsHero() {

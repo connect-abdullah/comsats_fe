@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { BookOpen, CheckCircle2 } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { PrimaryButton } from "@/components/ui/primary-button";
-import { COURSE_CATALOGUE } from "@/constants/academics-page";
-import { IMAGES } from "@/constants/images";
+import { COURSE_CATALOGUE } from "@/constants/academics/page";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function CourseCatalogue() {

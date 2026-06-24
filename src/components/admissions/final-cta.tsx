@@ -1,7 +1,7 @@
 "use client";
 
 import { CTASection } from "@/components/admissions/cta-section";
-import { FINAL_CTA } from "@/constants/admissions-page";
+import { FINAL_CTA } from "@/constants/admissions/page";
 
 export function FinalCTA() {
   return (

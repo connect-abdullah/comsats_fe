@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { QuickActionCardComponent } from "@/components/admissions/quick-action-card";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { QUICK_ACTIONS } from "@/constants/admissions-page";
+import { QUICK_ACTIONS } from "@/constants/admissions/page";
 import { staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function QuickActions() {

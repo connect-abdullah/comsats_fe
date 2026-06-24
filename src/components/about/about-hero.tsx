@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ABOUT_HERO } from "@/constants/about-page";
-import { IMAGES } from "@/constants/images";
+import { ABOUT_HERO } from "@/constants/about/page";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function AboutHero() {

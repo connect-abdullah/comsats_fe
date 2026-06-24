@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
-import { ABOUT_LEADERSHIP } from "@/constants/about-page";
+import { ABOUT_LEADERSHIP } from "@/constants/about/page";
 import { fadeIn, fadeUp, viewportOnce } from "@/lib/animations";
 
 export function AboutLeadership() {
@@ -36,7 +36,9 @@ export function AboutLeadership() {
                 <p className="text-lg font-semibold text-white">
                   {ABOUT_LEADERSHIP.name}
                 </p>
-                <p className="text-sm text-white/80">{ABOUT_LEADERSHIP.title}</p>
+                <p className="text-sm text-white/80">
+                  {ABOUT_LEADERSHIP.title}
+                </p>
               </div>
             </div>
           </div>
@@ -62,7 +64,9 @@ export function AboutLeadership() {
             standards in higher education.
           </p>
           <div>
-            <p className="text-xl font-bold text-ink">{ABOUT_LEADERSHIP.name}</p>
+            <p className="text-xl font-bold text-ink">
+              {ABOUT_LEADERSHIP.name}
+            </p>
             <p className="mt-1 text-sm font-semibold text-purple">
               {ABOUT_LEADERSHIP.title}
             </p>

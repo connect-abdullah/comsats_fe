@@ -21,7 +21,10 @@ export function UniversityCta() {
         Fall 2026 Admissions Now Open
       </motion.div>
 
-      <motion.div variants={fadeUp} className="mx-auto mb-5 flex justify-center">
+      <motion.div
+        variants={fadeUp}
+        className="mx-auto mb-5 flex justify-center"
+      >
         <div className="rounded-full bg-white p-1 shadow-lg shadow-black/10 ring-2 ring-white/20">
           <BrandLogo size={64} />
         </div>

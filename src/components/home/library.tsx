@@ -12,7 +12,7 @@ import {
 } from "@/lib/animations";
 import { StatCountUp } from "@/components/ui/stat-count-up";
 import { cn } from "@/lib/utils";
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 
 const LIBRARY_STATS = [
   { value: "150,000+", label: "Print Volumes", color: "text-purple" },

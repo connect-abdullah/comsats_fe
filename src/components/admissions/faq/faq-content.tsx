@@ -2,16 +2,16 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { FAQAccordion } from "@/components/admissions/faq-accordion";
-import { FAQSearch } from "@/components/admissions/faq-search";
-import { FAQTabs } from "@/components/admissions/faq-tabs";
+import { FAQAccordion } from "@/components/admissions/faq/faq-accordion";
+import { FAQSearch } from "@/components/admissions/faq/faq-search";
+import { FAQTabs } from "@/components/admissions/faq/faq-tabs";
 import { ScholarshipCard } from "@/components/admissions/scholarship-card";
 import { SectionContainer } from "@/components/ui/section-container";
 import {
   ADMISSION_RELATED_FAQS,
   GENERAL_FAQS,
-} from "@/constants/admissions-faq";
-import { FAQ_TABS, SCHOLARSHIPS } from "@/constants/admissions-page";
+} from "@/constants/admissions/faq";
+import { FAQ_TABS, SCHOLARSHIPS } from "@/constants/admissions/page";
 import {
   filterFaqs,
   filterFaqSections,
@@ -53,7 +53,10 @@ export function FaqContent() {
     if (!hash) return;
     const el = document.getElementById(hash);
     if (el) {
-      setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 100);
+      setTimeout(
+        () => el.scrollIntoView({ behavior: "smooth", block: "start" }),
+        100,
+      );
     }
   }, [activeTab]);
 
@@ -63,7 +66,12 @@ export function FaqContent() {
   );
 
   const filteredSections = useMemo(
-    () => filterFaqSections(ADMISSION_RELATED_FAQS, query, activeSection || undefined),
+    () =>
+      filterFaqSections(
+        ADMISSION_RELATED_FAQS,
+        query,
+        activeSection || undefined,
+      ),
     [query, activeSection],
   );
 
@@ -105,7 +113,9 @@ export function FaqContent() {
             onQueryChange={setQuery}
             onExpandAll={handleExpandAll}
             onCollapseAll={handleCollapseAll}
-            sectionFilters={activeTab === "admission" ? sectionFilters : undefined}
+            sectionFilters={
+              activeTab === "admission" ? sectionFilters : undefined
+            }
             activeSection={activeSection}
             onSectionChange={setActiveSection}
             resultCount={query ? resultCount : undefined}
@@ -138,7 +148,12 @@ export function FaqContent() {
         {activeTab === "admission" && (
           <>
             {filteredSections.length === 0 ? (
-              <EmptyState onReset={() => { setQuery(""); setActiveSection(""); }} />
+              <EmptyState
+                onReset={() => {
+                  setQuery("");
+                  setActiveSection("");
+                }}
+              />
             ) : (
               <div className="space-y-12">
                 {filteredSections.map((section) => (

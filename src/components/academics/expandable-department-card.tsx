@@ -76,7 +76,9 @@ export function ExpandableDepartmentCard({
     <div
       className={cn(
         "relative overflow-hidden rounded-card border transition-colors duration-300",
-        isOpen ? "border-line/80 bg-white shadow-soft" : "border-line/60 bg-surface/50",
+        isOpen
+          ? "border-line/80 bg-white shadow-soft"
+          : "border-line/60 bg-surface/50",
         styles.border,
       )}
     >

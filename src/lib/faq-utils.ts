@@ -46,8 +46,7 @@ export function buildFaqShareUrl(
   tab: FaqTabId,
   faqId?: string,
 ): string {
-  const origin =
-    typeof window !== "undefined" ? window.location.origin : "";
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
   const url = new URL(basePath, origin || "http://localhost");
   url.searchParams.set("tab", tab);
   if (faqId) url.hash = faqId;

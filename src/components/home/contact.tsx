@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CONTACT_CARDS, MAPS_EMBED_SRC } from "@/constants/contact";
+import { CONTACT_CARDS, MAPS_EMBED_SRC } from "@/constants/home/contact";
 import {
   fadeUp,
   fadeIn,
@@ -51,27 +51,34 @@ export function Contact() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="order-2 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-6 lg:col-start-7 lg:row-start-2"
+            className="order-2 grid grid-cols-2 items-stretch gap-3 sm:gap-6 lg:col-span-6 lg:col-start-7 lg:row-start-2"
           >
             {CONTACT_CARDS.map((card) => {
               const Icon = card.icon;
+              const cardClassName =
+                "flex h-full min-h-[168px] min-w-0 flex-col overflow-hidden rounded-card border border-line/80 bg-white p-3 transition-shadow sm:min-h-[188px] sm:p-5";
               const content = (
                 <>
                   <div
                     className={cn(
-                      "flex h-10 w-10 items-center justify-center rounded-lg",
+                      "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg sm:h-10 sm:w-10",
                       accentStyles[card.accent],
                     )}
                   >
-                    <Icon className="h-5 w-5" aria-hidden="true" />
+                    <Icon
+                      className="h-4 w-4 sm:h-5 sm:w-5"
+                      aria-hidden="true"
+                    />
                   </div>
-                  <h3 className="mt-4 text-lg font-bold text-ink">
+                  <h3 className="mt-2 line-clamp-2 min-h-[2.25rem] text-xs font-bold leading-snug text-ink sm:mt-3 sm:min-h-[2.75rem] sm:text-base">
                     {card.title}
                   </h3>
-                  <p className="mt-2 text-xs text-muted">{card.value}</p>
-                  {card.meta && (
-                    <p className="mt-1 text-[10px] text-muted">
-                      {card.meta.includes("24 Hours") ? (
+                  <p className="mt-1 line-clamp-3 min-h-[2.75rem] break-words text-[11px] leading-snug text-muted sm:mt-2 sm:min-h-[3rem] sm:text-xs">
+                    {card.value}
+                  </p>
+                  <p className="mt-auto line-clamp-2 min-h-[1.75rem] pt-1 text-[10px] leading-snug text-muted">
+                    {card.meta ? (
+                      card.meta.includes("24 Hours") ? (
                         <>
                           Response SLA:{" "}
                           <span className="font-semibold text-purple">
@@ -80,14 +87,22 @@ export function Contact() {
                         </>
                       ) : (
                         card.meta
-                      )}
-                    </p>
-                  )}
+                      )
+                    ) : (
+                      <span className="invisible" aria-hidden="true">
+                        &nbsp;
+                      </span>
+                    )}
+                  </p>
                 </>
               );
 
               return (
-                <motion.div key={card.title} variants={fadeUp}>
+                <motion.div
+                  key={card.title}
+                  variants={fadeUp}
+                  className="min-w-0"
+                >
                   {card.href ? (
                     <Link
                       href={card.href}
@@ -99,14 +114,12 @@ export function Contact() {
                           ? "noopener noreferrer"
                           : undefined
                       }
-                      className="block h-full rounded-card border border-line/80 bg-white p-6 transition-shadow hover:shadow-md"
+                      className={cn(cardClassName, "hover:shadow-md")}
                     >
                       {content}
                     </Link>
                   ) : (
-                    <div className="h-full rounded-card border border-line/80 bg-white p-6">
-                      {content}
-                    </div>
+                    <div className={cardClassName}>{content}</div>
                   )}
                 </motion.div>
               );

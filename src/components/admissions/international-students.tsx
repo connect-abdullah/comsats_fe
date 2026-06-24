@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
-import { INTERNATIONAL_STUDENTS } from "@/constants/admissions-page";
-import { IMAGES } from "@/constants/images";
+import { INTERNATIONAL_STUDENTS } from "@/constants/admissions/page";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function InternationalStudents() {

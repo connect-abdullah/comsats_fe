@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import type { AcademicCard, CampusLifeCard } from "@/types";
 
 export const ACADEMIC_CARDS: AcademicCard[] = [

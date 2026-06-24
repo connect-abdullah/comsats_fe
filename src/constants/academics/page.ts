@@ -22,11 +22,7 @@ import {
   Monitor,
   BookMarked,
 } from "lucide-react";
-import type {
-  AcademicDepartment,
-  AcademicStat,
-  CenterOffice,
-} from "@/types";
+import type { AcademicDepartment, AcademicStat, CenterOffice } from "@/types";
 
 export const ACADEMIC_STATS: AcademicStat[] = [
   {
@@ -142,12 +138,21 @@ export const ACADEMIC_DEPARTMENTS: AcademicDepartment[] = [
     accent: "purple",
     degrees: [
       { name: "Bachelor of Science in Computer Science", abbreviation: "BS" },
-      { name: "Bachelor of Science in Software Engineering", abbreviation: "BS" },
-      { name: "Bachelor of Science in Artificial Intelligence", abbreviation: "BS" },
+      {
+        name: "Bachelor of Science in Software Engineering",
+        abbreviation: "BS",
+      },
+      {
+        name: "Bachelor of Science in Artificial Intelligence",
+        abbreviation: "BS",
+      },
       { name: "Bachelor of Science in Cyber Security", abbreviation: "BS" },
       { name: "Bachelor of Science in Data Science", abbreviation: "BS" },
       { name: "Master of Science in Computer Science", abbreviation: "MS" },
-      { name: "Master of Science in Artificial Intelligence", abbreviation: "MS" },
+      {
+        name: "Master of Science in Artificial Intelligence",
+        abbreviation: "MS",
+      },
       {
         name: "Doctor of Philosophy in Computer Science",
         abbreviation: "PhD",

@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { StatisticCard } from "@/components/ui/statistic-card";
-import { ABOUT_STATS } from "@/constants/stats";
-import { IMAGES } from "@/constants/images";
+import { ABOUT_STATS } from "@/constants/home/stats";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 

@@ -9,7 +9,7 @@ import {
   ABOUT_MISSION,
   ABOUT_VISION,
   MISSION_PILLARS,
-} from "@/constants/about-page";
+} from "@/constants/about/page";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function AboutIntro() {

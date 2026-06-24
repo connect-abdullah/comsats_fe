@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import type { ContentItem } from "@/types";
 
 export const UPCOMING_EVENTS: ContentItem[] = [

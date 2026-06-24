@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronDown } from "lucide-react";
-import { NAV_ITEMS, SOCIAL_LINKS } from "@/constants/navigation";
+import { NAV_ITEMS, SOCIAL_LINKS } from "@/constants/shared/navigation";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types";

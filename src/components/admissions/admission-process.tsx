@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ProcessTimeline } from "@/components/admissions/process-step";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { ADMISSION_PROCESS } from "@/constants/admissions-page";
+import { ADMISSION_PROCESS } from "@/constants/admissions/page";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function AdmissionProcess() {

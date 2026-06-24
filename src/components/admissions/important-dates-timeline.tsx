@@ -3,7 +3,7 @@
 import { AdmissionTimeline } from "@/components/admissions/admission-timeline";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { IMPORTANT_DATES } from "@/constants/admissions-page";
+import { IMPORTANT_DATES } from "@/constants/admissions/page";
 
 export function ImportantDatesTimeline() {
   return (

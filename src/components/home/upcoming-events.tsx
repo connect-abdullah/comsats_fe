@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { Marquee } from "@/components/ui/marquee";
-import { UPCOMING_EVENTS } from "@/constants/events";
+import { UPCOMING_EVENTS } from "@/constants/home/events";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function UpcomingEvents() {
@@ -45,7 +45,7 @@ export function UpcomingEvents() {
               date={event.date}
               category={event.category}
               categoryColor={event.categoryColor}
-              className="w-[320px] shrink-0 md:w-[420px]"
+              className="h-[380px] w-[280px] shrink-0"
             />
           ))}
         </Marquee>

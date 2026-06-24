@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { EditorialCard } from "@/components/ui/editorial-card";
-import { LATEST_NEWS } from "@/constants/news";
+import { LATEST_NEWS } from "@/constants/home/news";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function LatestNews() {
@@ -46,21 +46,25 @@ export function LatestNews() {
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-2 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-2 md:gap-8 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3"
       >
         {LATEST_NEWS.map((item) => (
-          <EditorialCard
+          <div
             key={item.title}
-            variant="news"
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            category={item.category}
-            categoryColor={item.categoryColor}
-            ctaLabel="Read Entire Story"
-            href={item.href}
-          />
+            className="w-[85vw] shrink-0 snap-center sm:w-[70vw] md:w-auto md:shrink"
+          >
+            <EditorialCard
+              variant="news"
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              date={item.date}
+              category={item.category}
+              categoryColor={item.categoryColor}
+              ctaLabel="Read Entire Story"
+              href={item.href}
+            />
+          </div>
         ))}
       </motion.div>
     </SectionContainer>

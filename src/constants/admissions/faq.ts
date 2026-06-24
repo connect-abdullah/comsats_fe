@@ -1,6 +1,6 @@
 import type { FaqItem } from "@/types";
-import { ADMISSION_RELATED_FAQS } from "@/constants/admissions-faq-admission";
-import { SCHOLARSHIPS } from "@/constants/admissions-page";
+import { ADMISSION_RELATED_FAQS } from "@/constants/admissions/faq-admission";
+import { SCHOLARSHIPS } from "@/constants/admissions/page";
 
 export const GENERAL_FAQS: FaqItem[] = [
   {

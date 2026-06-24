@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import type { FeaturedNewsArticle, NewsArticle } from "@/types";
 
 export const FEATURED_NEWS: FeaturedNewsArticle[] = [

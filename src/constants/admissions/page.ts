@@ -58,7 +58,8 @@ export const QUICK_ACTIONS: QuickActionCard[] = [
   },
   {
     title: "PhD Programs",
-    description: "Research-intensive doctoral programs with distinguished faculty.",
+    description:
+      "Research-intensive doctoral programs with distinguished faculty.",
     href: "#programs",
     icon: Microscope,
     accent: "indigo",
@@ -143,7 +144,11 @@ export const PROGRAM_CATEGORIES: ProgramCategory[] = [
     title: "Graduate Programs",
     description:
       "Advanced master's programs designed to develop leadership, professional expertise, and research capability.",
-    disciplines: ["Leadership", "Professional Expertise", "Research Capability"],
+    disciplines: [
+      "Leadership",
+      "Professional Expertise",
+      "Research Capability",
+    ],
     ctaLabel: "Explore Graduate Programs",
     href: ADMISSIONS_PORTAL_URL,
     accent: "blue",
@@ -169,8 +174,7 @@ export const ADMISSION_PROCESS: ProcessStep[] = [
   {
     step: 1,
     title: "Explore Programs",
-    description:
-      "Browse undergraduate, graduate, and doctoral offerings.",
+    description: "Browse undergraduate, graduate, and doctoral offerings.",
   },
   {
     step: 2,

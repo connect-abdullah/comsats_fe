@@ -5,8 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { SecondaryButton } from "@/components/ui/secondary-button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { ADMISSIONS_HERO } from "@/constants/admissions-page";
-import { IMAGES } from "@/constants/images";
+import { ADMISSIONS_HERO } from "@/constants/admissions/page";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function AdmissionsHero() {

@@ -64,14 +64,21 @@ export function EditorialCard({
       )}
     >
       <div
-        className={cn("relative w-full overflow-hidden", aspectMap[variant])}
+        className={cn(
+          "relative w-full shrink-0 overflow-hidden",
+          aspectMap[variant],
+        )}
       >
         <Image
           src={image}
           alt={title}
           fill
           priority={priority}
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          sizes={
+            variant === "event"
+              ? "280px"
+              : "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          }
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {category && (
@@ -86,10 +93,17 @@ export function EditorialCard({
         )}
       </div>
 
-      <div className="flex flex-1 flex-col justify-between p-8">
-        <div className="space-y-4">
+      <div
+        className={cn(
+          "flex flex-1 flex-col",
+          variant === "event"
+            ? "min-h-0 justify-start p-5"
+            : "justify-between p-5 md:p-8",
+        )}
+      >
+        <div className={variant === "event" ? "min-h-0 flex-1" : "space-y-4"}>
           {variant === "event" && date && (
-            <p className="text-xs font-bold tracking-wider text-blue uppercase">
+            <p className="min-h-4 truncate text-xs font-bold tracking-wider text-blue uppercase">
               {date}
             </p>
           )}
@@ -100,14 +114,23 @@ export function EditorialCard({
             className={cn(
               "font-bold leading-snug text-ink",
               variant === "news" || variant === "event"
-                ? "text-[22px] group-hover:text-purple"
-                : "text-2xl",
+                ? "text-lg group-hover:text-purple md:text-[22px]"
+                : "text-xl md:text-2xl",
+              variant === "event" &&
+                "mt-3 line-clamp-2 min-h-[3.25rem] md:min-h-[3.5rem]",
             )}
           >
             {title}
           </h3>
           {description && (
-            <p className="text-sm leading-relaxed text-muted">{description}</p>
+            <p
+              className={cn(
+                "text-sm leading-relaxed text-muted",
+                variant === "event" && "mt-2 line-clamp-3 min-h-[3.75rem]",
+              )}
+            >
+              {description}
+            </p>
           )}
         </div>
 

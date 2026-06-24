@@ -2,7 +2,7 @@
 
 import { SectionContainer } from "@/components/ui/section-container";
 import { StatCountUp } from "@/components/ui/stat-count-up";
-import { ACADEMIC_STATS } from "@/constants/academics-page";
+import { ACADEMIC_STATS } from "@/constants/academics/page";
 
 export function AcademicStatistics() {
   return (
@@ -12,7 +12,10 @@ export function AcademicStatistics() {
           {ACADEMIC_STATS.map((stat) => {
             const Icon = stat.icon;
             return (
-              <div key={stat.label} className="px-4 py-8 text-center sm:px-8 sm:py-10">
+              <div
+                key={stat.label}
+                className="px-4 py-8 text-center sm:px-8 sm:py-10"
+              >
                 <Icon
                   className="mx-auto h-7 w-7 text-purple"
                   aria-hidden="true"

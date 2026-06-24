@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import type { AdminOffice, MissionPillar } from "@/types";
 
 export const ABOUT_HERO = {
@@ -97,5 +97,6 @@ export const ADMIN_OFFICES_SECTION = {
   description:
     "Supporting the Islamabad campus through dedicated administrative, student services, and operational offices.",
   image: IMAGES.aboutUs.about2,
-  imageAlt: "COMSATS University Islamabad campus building and administrative offices",
+  imageAlt:
+    "COMSATS University Islamabad campus building and administrative offices",
 };

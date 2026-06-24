@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { SERVICES } from "@/constants/services";
+import { SERVICES } from "@/constants/home/services";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 import type { ServiceItem } from "@/types";
@@ -42,7 +42,7 @@ export function Services() {
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        className="mt-14 grid grid-cols-2 items-stretch gap-3 md:gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         <AnimatePresence initial={false}>
           {visible.map((service) => {
@@ -55,20 +55,20 @@ export function Services() {
                 initial="hidden"
                 animate="show"
                 exit={{ opacity: 0, y: 10 }}
-                className="group rounded-card border border-line/80 bg-white p-8 transition-all duration-300 hover:shadow-lg"
+                className="group flex h-full min-h-[200px] min-w-0 flex-col overflow-hidden rounded-card border border-line/80 bg-white p-4 transition-all duration-300 hover:shadow-lg sm:min-h-[240px] sm:p-6 lg:p-8"
               >
                 <div
                   className={cn(
-                    "flex h-12 w-12 items-center justify-center rounded-xl",
+                    "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl sm:h-12 sm:w-12",
                     accentStyles[service.accent],
                   )}
                 >
-                  <Icon className="h-6 w-6" aria-hidden="true" />
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
                 </div>
-                <h3 className="mt-6 text-xl font-bold text-ink">
+                <h3 className="mt-3 line-clamp-2 min-h-[2.5rem] text-sm font-bold leading-snug text-ink sm:mt-4 sm:min-h-[3rem] sm:text-base lg:text-xl">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
+                <p className="mt-2 line-clamp-3 min-h-[3rem] flex-1 text-xs leading-snug text-muted sm:mt-3 sm:min-h-[3.75rem] sm:text-sm">
                   {service.description}
                 </p>
               </motion.div>

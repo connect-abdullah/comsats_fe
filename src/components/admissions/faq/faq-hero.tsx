@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import { FAQ_HERO } from "@/constants/admissions-page";
-import { IMAGES } from "@/constants/images";
+import { FAQ_HERO } from "@/constants/admissions/page";
+import { IMAGES } from "@/constants/shared/images";
 
 export function FaqHero() {
   return (

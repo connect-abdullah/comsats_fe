@@ -5,7 +5,10 @@ import { ScholarshipCard } from "@/components/admissions/scholarship-card";
 import { StatCountUp } from "@/components/ui/stat-count-up";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { SCHOLARSHIPS, SCHOLARSHIPS_HEADLINE } from "@/constants/admissions-page";
+import {
+  SCHOLARSHIPS,
+  SCHOLARSHIPS_HEADLINE,
+} from "@/constants/admissions/page";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function ScholarshipsSection() {

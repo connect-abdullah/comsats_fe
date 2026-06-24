@@ -8,7 +8,10 @@ interface ScholarshipCardProps {
   className?: string;
 }
 
-export function ScholarshipCard({ scholarship, className }: ScholarshipCardProps) {
+export function ScholarshipCard({
+  scholarship,
+  className,
+}: ScholarshipCardProps) {
   return (
     <article
       className={cn(

@@ -1,4 +1,4 @@
-import { IMAGES } from "@/constants/images";
+import { IMAGES } from "@/constants/shared/images";
 import type { MediaItem } from "@/types";
 
 export const MEDIA_ITEMS: MediaItem[] = [

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ExpandableDepartmentCard } from "@/components/academics/expandable-department-card";
-import { ACADEMIC_DEPARTMENTS } from "@/constants/academics-page";
+import { ACADEMIC_DEPARTMENTS } from "@/constants/academics/page";
 import { staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function DepartmentShowcase() {

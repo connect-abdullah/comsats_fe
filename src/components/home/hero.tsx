@@ -7,8 +7,8 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { SecondaryButton } from "@/components/ui/secondary-button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { SocialButton } from "@/components/ui/social-button";
-import { SOCIAL_LINKS } from "@/constants/navigation";
-import { IMAGES } from "@/constants/images";
+import { SOCIAL_LINKS } from "@/constants/shared/navigation";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 export function Hero() {
@@ -133,21 +133,24 @@ export function Hero() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-purple/40 via-transparent to-transparent" />
 
-            <div className="absolute right-6 bottom-6 left-6 flex items-center justify-between rounded-card border border-white/20 bg-white/90 p-6 shadow-lift backdrop-blur-md">
+            <div className="absolute right-3 bottom-3 left-3 flex items-center justify-between rounded-card border border-white/20 bg-white/90 p-3 shadow-lift backdrop-blur-md md:right-6 md:bottom-6 md:left-6 md:p-6">
               <div>
-                <p className="font-sans text-xs font-semibold tracking-wider text-blue uppercase">
+                <p className="font-sans text-[10px] font-semibold tracking-wider text-blue uppercase md:text-xs">
                   Latest Update
                 </p>
-                <h2 className="mt-1 font-sans text-sm font-bold text-ink">
+                <h2 className="mt-0.5 font-sans text-xs font-bold text-ink md:mt-1 md:text-sm">
                   Admissions Fall 2026 are Open
                 </h2>
               </div>
               <Link
                 href="/admissions"
                 aria-label="View admissions"
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-purple text-white transition-colors hover:bg-blue"
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple text-white transition-colors hover:bg-blue md:h-10 md:w-10"
               >
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                <ArrowRight
+                  className="h-4 w-4 md:h-5 md:w-5"
+                  aria-hidden="true"
+                />
               </Link>
             </div>
           </div>

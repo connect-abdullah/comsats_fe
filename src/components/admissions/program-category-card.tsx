@@ -53,7 +53,9 @@ export function ProgramCategoryCard({ category }: ProgramCategoryCardProps) {
       >
         <Icon className="h-7 w-7" aria-hidden="true" />
       </div>
-      <h3 className="mt-4 text-xl font-bold text-ink sm:mt-6 sm:text-2xl">{category.title}</h3>
+      <h3 className="mt-4 text-xl font-bold text-ink sm:mt-6 sm:text-2xl">
+        {category.title}
+      </h3>
       <p className="mt-3 leading-relaxed text-muted sm:mt-4 md:min-h-18">
         {category.description}
       </p>

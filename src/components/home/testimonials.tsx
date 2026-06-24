@@ -2,8 +2,8 @@ import Image from "next/image";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Marquee } from "@/components/ui/marquee";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
-import { TESTIMONIALS } from "@/constants/testimonials";
-import { IMAGES } from "@/constants/images";
+import { TESTIMONIALS } from "@/constants/home/testimonials";
+import { IMAGES } from "@/constants/shared/images";
 
 export function Testimonials() {
   const mid = Math.ceil(TESTIMONIALS.length / 2);

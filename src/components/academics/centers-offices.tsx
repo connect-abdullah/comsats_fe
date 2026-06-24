@@ -8,8 +8,8 @@ import { SectionHeader } from "@/components/ui/section-header";
 import {
   CENTERS_DESCRIPTION,
   CENTERS_OFFICES,
-} from "@/constants/academics-page";
-import { IMAGES } from "@/constants/images";
+} from "@/constants/academics/page";
+import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 
 export function CentersOffices() {

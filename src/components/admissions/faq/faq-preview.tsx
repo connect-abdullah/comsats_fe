@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { FAQAccordion } from "@/components/admissions/faq-accordion";
+import { FAQAccordion } from "@/components/admissions/faq/faq-accordion";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import { FAQ_PREVIEW_ITEMS } from "@/constants/admissions-faq";
-import { FAQ_PREVIEW_SECTION } from "@/constants/admissions-page";
+import { FAQ_PREVIEW_ITEMS } from "@/constants/admissions/faq";
+import { FAQ_PREVIEW_SECTION } from "@/constants/admissions/page";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function FaqPreview() {
@@ -27,10 +27,7 @@ export function FaqPreview() {
         viewport={viewportOnce}
         className="mx-auto mt-14 max-w-3xl"
       >
-        <FAQAccordion
-          items={FAQ_PREVIEW_ITEMS}
-          showShareLink={false}
-        />
+        <FAQAccordion items={FAQ_PREVIEW_ITEMS} showShareLink={false} />
       </motion.div>
 
       <div className="mt-10 text-center">

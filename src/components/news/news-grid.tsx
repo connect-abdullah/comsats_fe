@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
 import { NewsCard } from "@/components/news/news-card";
-import { NEWS_ARTICLES } from "@/constants/news-page";
+import { NEWS_ARTICLES } from "@/constants/news/page";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
@@ -44,10 +44,7 @@ export function NewsGrid() {
               animate="show"
               exit={{ opacity: 0, y: 10 }}
             >
-              <NewsCard
-                article={article}
-                priority={index < 3}
-              />
+              <NewsCard article={article} priority={index < 3} />
             </motion.div>
           ))}
         </AnimatePresence>
