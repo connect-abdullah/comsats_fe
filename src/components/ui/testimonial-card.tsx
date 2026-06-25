@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import { getInitials } from "@/lib/utils";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import type { Testimonial } from "@/types";
 
 export function TestimonialCard({ name, program, quote, image }: Testimonial) {
@@ -18,6 +19,7 @@ export function TestimonialCard({ name, program, quote, image }: Testimonial) {
             width={48}
             height={48}
             className="h-12 w-12 rounded-full object-cover"
+            {...getImageLoadingProps()}
           />
         ) : (
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-purple text-sm font-bold text-white">

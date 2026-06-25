@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import type { NewsArticle } from "@/types";
 
 interface NewsCardProps {
@@ -31,9 +32,9 @@ export function NewsCard({
           src={article.image}
           alt={article.title}
           fill
-          priority={priority}
           sizes="(max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          {...getImageLoadingProps({ priority })}
         />
         <div
           className="absolute inset-0 bg-linear-to-t from-ink/30 via-transparent to-transparent"

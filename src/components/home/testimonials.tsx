@@ -4,6 +4,7 @@ import { Marquee } from "@/components/ui/marquee";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { TESTIMONIALS } from "@/constants/home/testimonials";
 import { IMAGES } from "@/constants/shared/images";
+import { getImageLoadingProps } from "@/lib/image-loading";
 
 export function Testimonials() {
   const mid = Math.ceil(TESTIMONIALS.length / 2);
@@ -20,6 +21,7 @@ export function Testimonials() {
           sizes="100vw"
           className="object-cover"
           aria-hidden="true"
+          {...getImageLoadingProps()}
         />
         <div className="absolute inset-0 bg-ink/[0.85]" />
       </div>

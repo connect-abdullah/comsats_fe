@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { AboutHero } from "@/components/about/about-hero";
-import { AboutIntro } from "@/components/about/about-intro";
 import { AboutHistory } from "@/components/about/about-history";
+import { AboutIntro } from "@/components/about/about-intro";
 import { AboutLeadership } from "@/components/about/about-leadership";
 import { AdminOffices } from "@/components/about/admin-offices";
+import { PageHero } from "@/components/ui/page-hero";
+import { ABOUT_HERO } from "@/constants/about/page";
+import { IMAGES } from "@/constants/shared/images";
 
 export const metadata: Metadata = {
   title: "About Islamabad Campus",
@@ -14,7 +16,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <AboutHero />
+      <PageHero
+        badge={ABOUT_HERO.label}
+        title={ABOUT_HERO.heading}
+        tagline={ABOUT_HERO.tagline}
+        backgroundImage={IMAGES.aboutUs.parkingBuilding}
+        imageAlt="COMSATS University Islamabad campus"
+        showBadgePulse={false}
+      />
       <AboutIntro />
       <AboutHistory />
       <AboutLeadership />

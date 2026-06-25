@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { FaqHero } from "@/components/admissions/faq/faq-hero";
 import { FaqContent } from "@/components/admissions/faq/faq-content";
+import { PageHero } from "@/components/ui/page-hero";
+import { FAQ_HERO } from "@/constants/admissions/page";
+import { IMAGES } from "@/constants/shared/images";
 
 export const metadata: Metadata = {
   title: "Admissions FAQ",
@@ -12,7 +14,15 @@ export const metadata: Metadata = {
 export default function AdmissionsFaqPage() {
   return (
     <>
-      <FaqHero />
+      <PageHero
+        badge="FAQ"
+        title={FAQ_HERO.heading}
+        description={FAQ_HERO.description}
+        backgroundImage={IMAGES.admissions.faq}
+        align="center"
+        size="compact"
+        showBadgePulse={false}
+      />
       <Suspense fallback={<div className="min-h-[400px] bg-white" />}>
         <FaqContent />
       </Suspense>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { PROGRAM_CARDS } from "@/constants/home/admissions";
+import { ADMISSIONS_PORTAL_URL } from "@/constants/shared/urls";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
@@ -61,7 +62,9 @@ export function Admissions() {
 
           <motion.div variants={fadeUp} className="flex flex-col gap-3 pt-4">
             <Link
-              href="/admissions"
+              href={ADMISSIONS_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-between rounded-xl bg-purple px-6 py-4 font-semibold text-white shadow-lg shadow-purple/20 transition-colors hover:bg-blue"
             >
               <span>Start Online Application</span>

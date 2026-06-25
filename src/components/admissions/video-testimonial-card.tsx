@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Play } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import type { VideoTestimonial } from "@/types";
 
 interface VideoTestimonialCardProps {
@@ -35,6 +36,7 @@ export function VideoTestimonialCard({
             fill
             sizes="360px"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
+            {...getImageLoadingProps()}
           />
           <div
             className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent"

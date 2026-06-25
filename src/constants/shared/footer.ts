@@ -1,5 +1,7 @@
 import type { FooterColumn } from "@/types";
 
+const LEGACY_SITE = "https://ww2.comsats.edu.pk";
+
 export const UNIVERSITY_INFO = {
   name: "COMSATS University Islamabad",
   address: "Park Road, Islamabad, Pakistan",
@@ -12,33 +14,86 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Resources",
     links: [
-      { label: "HEC", href: "#" },
-      { label: "Refund Policy", href: "#" },
-      { label: "POLs", href: "#" },
-      { label: "Online SOPs", href: "#" },
-      { label: "Degree Verification", href: "#" },
-      { label: "Undergraduate Admissions", href: "/admissions" },
-      { label: "Graduate Admissions", href: "/admissions" },
-      { label: "Admissions FAQ", href: "/admissions/faq" },
+      {
+        label: "HEC Refund Policy",
+        href: `${LEGACY_SITE}/NEFiles/Notification-HEC-National-Fee-Refund-Policy-Revised-2024.pdf`,
+      },
+      {
+        label: "Pollens Online",
+        href: `${LEGACY_SITE}/pollensonline/`,
+      },
+      {
+        label: "SoPs for Degree Verification",
+        href: `${LEGACY_SITE}/NEFiles/SoPs-for-Verification-Process-13-02-2024.pdf`,
+      },
+      {
+        label: "UG Admission",
+        href: `${LEGACY_SITE}/Admissions/ApplyOnline-UG.doc`,
+      },
+      {
+        label: "Graduate Admission",
+        href: `${LEGACY_SITE}/Admissions/ApplyOnline-GRADed.docm`,
+      },
     ],
   },
   {
     title: "Student Life",
     links: [
-      { label: "Rules & Regulations", href: "#" },
-      { label: "Hostel Reservation", href: "#" },
-      { label: "Telephone Directory", href: "#" },
-      { label: "Reader Society", href: "#" },
-      { label: "QEC", href: "#" },
+      {
+        label: "Rules & Regulations",
+        href: `${LEGACY_SITE}/studentaffairs/code-of-conduct.aspx`,
+      },
+      {
+        label: "Hall Reservation",
+        href: `${LEGACY_SITE}/halls-reservation-schedule.aspx`,
+      },
+      {
+        label: "Telephone Directory",
+        href: `${LEGACY_SITE}/telephonedirectory/`,
+      },
+      {
+        label: "Readers Society",
+        href: "https://ciitreaders.wordpress.com/",
+      },
+      {
+        label: "QEC",
+        href: `${LEGACY_SITE}/qec`,
+      },
     ],
   },
   {
     title: "Support",
     links: [
-      { label: "Office 365 Setup", href: "#" },
-      { label: "SECP Guide", href: "#" },
-      { label: "Statutory Information", href: "#" },
-      { label: "Elections", href: "#" },
+      {
+        label: "Office 365 Setup",
+        href: `${LEGACY_SITE}/NEFiles/Configuration%20Guide%20Mobile%20Devices.pdf`,
+      },
+      {
+        label: "SECP Guide",
+        href: "https://www.secp.gov.pk/media-center/guide-books/general-guide-books/",
+      },
+      {
+        label: "Elections",
+        href: `${LEGACY_SITE}/election.aspx`,
+      },
+    ],
+  },
+  {
+    title: "Statutory Info",
+    links: [
+      {
+        label: "CUI Act - 2018",
+        href: "https://www.comsats.edu.pk/rules/CUI-Act.pdf",
+      },
+      {
+        label: "Rules of Business of the Meetings of CUI Authorities - 2018",
+        href: "https://www.comsats.edu.pk/rules/Rules-of-Business-of-the-Meetings-of-CUI-Authorities-2018.pdf",
+      },
+      {
+        label:
+          "Statutes of the Authorities, Committees, Principal Officers, and Teachers of CUI - 2019",
+        href: "https://www.comsats.edu.pk/rules/",
+      },
     ],
   },
 ];

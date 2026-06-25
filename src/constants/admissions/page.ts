@@ -19,8 +19,9 @@ import type {
   TimelineEvent,
   WhyChooseFeature,
 } from "@/types";
+import { ADMISSIONS_PORTAL_URL } from "@/constants/shared/urls";
 
-export const ADMISSIONS_PORTAL_URL = "https://admissions.comsats.edu.pk";
+export { ADMISSIONS_PORTAL_URL };
 
 export const ADMISSIONS_HERO = {
   label: "Admissions",

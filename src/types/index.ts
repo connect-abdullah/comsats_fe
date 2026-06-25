@@ -40,6 +40,7 @@ export interface CampusLifeCard {
   description: string;
   image: string;
   ctaLabel: string;
+  href?: string;
 }
 
 export interface ContentItem {
@@ -92,6 +93,8 @@ export interface AcademicDegree {
   name: string;
   abbreviation?: string;
 }
+
+export type DegreeLevel = "BS" | "MS" | "PhD";
 
 export interface AcademicDepartment {
   id: string;
@@ -258,4 +261,122 @@ export interface VideoTestimonial {
   designation: string;
   thumbnail: string;
   videoUrl?: string;
+}
+
+export interface ResearchStat {
+  value: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+export interface ResearchCenter {
+  id: string;
+  name: string;
+  description: string;
+  highlights: string[];
+  researchAreas: string[];
+  href: string;
+  image?: string;
+}
+
+export interface PublicationMetric {
+  department: string;
+  count: number;
+}
+
+export interface ConferenceItem {
+  name: string;
+  tagline?: string;
+}
+
+export interface ResearchOpportunity {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  accent: "purple" | "blue" | "amber" | "emerald";
+}
+
+export interface CollaborationFeature {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export interface ResearchHighlight {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  categoryColor: "purple" | "blue";
+  href: string;
+  ctaLabel?: string;
+  featured?: boolean;
+}
+
+export type HeroCtaVariant = "primary" | "secondary" | "shimmer" | "text-link";
+
+export interface HeroCta {
+  label: string;
+  href: string;
+  variant?: HeroCtaVariant;
+  external?: boolean;
+}
+
+export type PageHeroAlign = "left" | "center";
+export type PageHeroSize = "screen" | "compact";
+export type PageHeroOverlay = "default" | "strong";
+
+export interface PageHeroProps {
+  badge: string;
+  title: string;
+  backgroundImage: string;
+  imageAlt?: string;
+  tagline?: string;
+  description?: string;
+  subDescription?: string;
+  align?: PageHeroAlign;
+  size?: PageHeroSize;
+  showBadgePulse?: boolean;
+  ctas?: HeroCta[];
+  overlay?: PageHeroOverlay;
+  id?: string;
+}
+
+export type ShowcaseListType = "chevron" | "check";
+
+export interface ShowcaseList {
+  type: ShowcaseListType;
+  items: string[];
+}
+
+export type ContentShowcaseImageAspect = "16/10" | "4/3";
+export type ContentShowcaseImagePosition = "left" | "right";
+export type ContentShowcaseImageOverlay = "purple" | "ink";
+export type ContentShowcaseBackground = "white" | "surface";
+export type ContentShowcaseHeaderVariant = "sectionHeader" | "inline";
+
+export interface ContentShowcaseCta {
+  label: string;
+  href: string;
+  icon?: LucideIcon;
+}
+
+export interface ContentShowcaseProps {
+  id?: string;
+  sectionLabel?: string;
+  heading: string;
+  description?: string;
+  paragraphs?: string[];
+  image: string;
+  imageAlt: string;
+  imageAspect?: ContentShowcaseImageAspect;
+  imagePosition?: ContentShowcaseImagePosition;
+  imageOverlay?: ContentShowcaseImageOverlay;
+  background?: ContentShowcaseBackground;
+  list?: ShowcaseList;
+  cta?: ContentShowcaseCta;
+  headerVariant?: ContentShowcaseHeaderVariant;
+  reverseLayout?: boolean;
+  priority?: boolean;
 }

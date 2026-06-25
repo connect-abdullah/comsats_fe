@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { CtaBanner } from "@/components/ui/cta-banner";
+import { ADMISSIONS_PORTAL_URL } from "@/constants/shared/urls";
 import { fadeUp } from "@/lib/animations";
 
 export function UniversityCta() {
@@ -47,7 +48,9 @@ export function UniversityCta() {
 
       <motion.div variants={fadeUp} className="mt-8 flex justify-center">
         <Link
-          href="/admissions"
+          href={ADMISSIONS_PORTAL_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="group inline-flex items-center justify-center gap-2 rounded-pill bg-white px-9 py-4 text-base font-bold tracking-wide text-purple shadow-lg shadow-black/10 transition-all duration-300 hover:bg-zinc-50"
         >
           Apply Now

@@ -7,6 +7,7 @@ import { Play } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Marquee } from "@/components/ui/marquee";
 import { MEDIA_ITEMS } from "@/constants/home/media";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import type { MediaItem } from "@/types";
 
 const VideoModal = dynamic(
@@ -35,6 +36,7 @@ function MediaCard({
           fill
           sizes="360px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          {...getImageLoadingProps()}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
         <span className="absolute left-4 top-4 rounded-pill bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">

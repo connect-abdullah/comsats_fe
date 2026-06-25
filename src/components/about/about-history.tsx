@@ -6,6 +6,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { SecondaryButton } from "@/components/ui/secondary-button";
 import { ABOUT_HISTORY } from "@/constants/about/page";
 import { fadeUp, viewportOnce } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 
 export function AboutHistory() {
   return (
@@ -54,6 +55,7 @@ export function AboutHistory() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
+                {...getImageLoadingProps()}
               />
               <div
                 className="absolute inset-0 bg-linear-to-t from-ink/40 via-transparent to-transparent"

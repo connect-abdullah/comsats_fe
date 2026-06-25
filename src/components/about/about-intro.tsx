@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { ContentShowcase } from "@/components/ui/content-showcase";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
 import {
@@ -15,58 +15,18 @@ import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
 export function AboutIntro() {
   return (
     <>
-      <SectionContainer id="about-campus" className="bg-white">
-        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-16">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-            className="lg:col-span-6"
-          >
-            <span className="text-sm font-semibold tracking-[0.2em] text-blue uppercase">
-              {ABOUT_INTRO.label}
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">
-              {ABOUT_INTRO.heading}
-            </h2>
-            <div className="mt-6 space-y-4">
-              {ABOUT_INTRO.paragraphs.map((paragraph) => (
-                <p
-                  key={paragraph.slice(0, 40)}
-                  className="text-base leading-relaxed text-muted sm:text-lg"
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-            className="lg:col-span-6"
-          >
-            <div className="relative overflow-hidden rounded-card shadow-lift">
-              <div className="relative aspect-[16/10]">
-                <Image
-                  src={ABOUT_INTRO.image}
-                  alt={ABOUT_INTRO.imageAlt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div
-                  className="absolute inset-0 bg-linear-to-t from-purple/25 via-transparent to-transparent"
-                  aria-hidden="true"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </SectionContainer>
+      <ContentShowcase
+        id="about-campus"
+        sectionLabel={ABOUT_INTRO.label}
+        heading={ABOUT_INTRO.heading}
+        paragraphs={ABOUT_INTRO.paragraphs}
+        image={ABOUT_INTRO.image}
+        imageAlt={ABOUT_INTRO.imageAlt}
+        imageAspect="16/10"
+        imagePosition="right"
+        imageOverlay="purple"
+        background="white"
+      />
 
       <SectionContainer className="bg-surface">
         <SectionHeader

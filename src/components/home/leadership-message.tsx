@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { SectionContainer } from "@/components/ui/section-container";
 import { fadeUp, fadeIn, viewportOnce } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import { IMAGES } from "@/constants/shared/images";
 
 export function LeadershipMessage() {
@@ -31,6 +32,7 @@ export function LeadershipMessage() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
+                {...getImageLoadingProps()}
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-6">
                 <p className="text-lg font-semibold text-white">

@@ -6,6 +6,7 @@ import { StatisticCard } from "@/components/ui/statistic-card";
 import { ABOUT_STATS } from "@/constants/home/stats";
 import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import { cn } from "@/lib/utils";
 
 const BENTO_LAYOUT = [
@@ -49,6 +50,7 @@ export function AboutComsats() {
         sizes="100vw"
         className="object-cover"
         aria-hidden="true"
+        {...getImageLoadingProps()}
       />
       <div className="absolute inset-0 bg-purple/60" aria-hidden="true" />
       <div className="absolute inset-0 bg-ink/20" aria-hidden="true" />

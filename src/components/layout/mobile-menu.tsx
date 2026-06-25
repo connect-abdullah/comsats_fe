@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronDown } from "lucide-react";
 import { NAV_ITEMS, SOCIAL_LINKS } from "@/constants/shared/navigation";
+import { ADMISSIONS_PORTAL_URL } from "@/constants/shared/urls";
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { cn } from "@/lib/utils";
 import type { NavItem } from "@/types";
@@ -128,7 +129,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
 
             <div className="mt-auto flex flex-col gap-5 pt-6">
               <Link
-                href="/admissions"
+                href={ADMISSIONS_PORTAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={onClose}
                 className="inline-flex w-full items-center justify-center rounded-pill bg-purple px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue"
               >

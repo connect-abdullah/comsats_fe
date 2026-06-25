@@ -8,8 +8,10 @@ import { SecondaryButton } from "@/components/ui/secondary-button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { SocialButton } from "@/components/ui/social-button";
 import { SOCIAL_LINKS } from "@/constants/shared/navigation";
+import { ADMISSIONS_PORTAL_URL } from "@/constants/shared/urls";
 import { IMAGES } from "@/constants/shared/images";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 
 export function Hero() {
   return (
@@ -21,10 +23,10 @@ export function Hero() {
         src={IMAGES.hero.background}
         alt=""
         fill
-        priority
         sizes="100vw"
         className="object-cover"
         aria-hidden="true"
+        {...getImageLoadingProps({ priority: true })}
       />
       <div className="absolute inset-0 bg-purple/55" aria-hidden="true" />
       <div className="absolute inset-0 bg-ink/20" aria-hidden="true" />
@@ -79,7 +81,12 @@ export function Hero() {
             variants={fadeUp}
             className="flex w-full flex-wrap items-center gap-4 sm:w-auto"
           >
-            <Link href="/admissions" className="w-full sm:w-auto">
+            <Link
+              href={ADMISSIONS_PORTAL_URL}
+              className="w-full sm:w-auto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ShimmerButton
                 className="w-full px-7 py-3.5 text-base font-semibold shadow-glow sm:w-auto"
                 background="linear-gradient(120deg, #4c227b 0%, #0f5ea6 100%)"
@@ -127,9 +134,9 @@ export function Hero() {
               src={IMAGES.hero.showcase}
               alt="Junaid Zaidi Library at COMSATS University Islamabad"
               fill
-              priority
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover"
+              {...getImageLoadingProps({ priority: true })}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-purple/40 via-transparent to-transparent" />
 
@@ -143,8 +150,10 @@ export function Hero() {
                 </h2>
               </div>
               <Link
-                href="/admissions"
-                aria-label="View admissions"
+                href={ADMISSIONS_PORTAL_URL}
+                aria-label="Apply for admissions"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple text-white transition-colors hover:bg-blue md:h-10 md:w-10"
               >
                 <ArrowRight

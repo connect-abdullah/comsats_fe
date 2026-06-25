@@ -7,6 +7,7 @@ import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ADMIN_OFFICES, ADMIN_OFFICES_SECTION } from "@/constants/about/page";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 
 export function AdminOffices() {
   return (
@@ -26,6 +27,7 @@ export function AdminOffices() {
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
+              {...getImageLoadingProps()}
             />
             <div
               className="absolute inset-0 bg-linear-to-t from-purple/20 via-transparent to-transparent"

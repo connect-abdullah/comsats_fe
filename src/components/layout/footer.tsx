@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-ink text-white">
       <div className="absolute inset-x-0 top-0 h-1 brand-gradient" />
       <div className="container-cui py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
           {/* University info */}
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">
@@ -68,16 +68,22 @@ export function Footer() {
                 {column.title}
               </h3>
               <ul className="flex flex-col gap-2.5 text-sm text-white/70">
-                {column.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="transition-colors hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {column.links.map((link) => {
+                  const isExternal = link.href.startsWith("http");
+                  return (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="transition-colors hover:text-white"
+                        {...(isExternal
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

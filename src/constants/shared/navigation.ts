@@ -15,10 +15,10 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "About Campus", href: "/about" },
       { label: "News", href: "/news" },
-      { label: "Research", href: "/#departments" },
-      { label: "Library", href: "/#library" },
-      { label: "Healthcare", href: "/#campus-life" },
-      { label: "Campus Life", href: "/#campus-life" },
+      { label: "Research", href: "/research" },
+      { label: "Library", href: "/library" },
+      { label: "Healthcare", href: "/health-care" },
+      { label: "Campus Life", href: "/campus-life" },
     ],
   },
 ];

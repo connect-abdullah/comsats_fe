@@ -12,6 +12,7 @@ import {
 } from "@/lib/animations";
 import { StatCountUp } from "@/components/ui/stat-count-up";
 import { cn } from "@/lib/utils";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import { IMAGES } from "@/constants/shared/images";
 
 const LIBRARY_STATS = [
@@ -87,7 +88,7 @@ export function Library() {
 
             <motion.div variants={fadeUp} className="pt-2">
               <Link
-                href="#library"
+                href="/library"
                 className="inline-flex items-center text-sm font-semibold text-purple transition-colors hover:text-blue"
               >
                 Launch Library OPAC Search
@@ -118,6 +119,7 @@ export function Library() {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 40vw"
                   className="object-cover transition-transform duration-500 hover:scale-105"
+                  {...getImageLoadingProps()}
                 />
               </div>
             </div>

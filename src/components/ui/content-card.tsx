@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import { cn } from "@/lib/utils";
 
 interface ContentCardProps {
@@ -43,9 +44,9 @@ export function ContentCard({
           src={image}
           alt={title}
           fill
-          priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          {...getImageLoadingProps({ priority })}
         />
         {date && (
           <span className="absolute left-4 top-4 rounded-pill bg-white/90 px-3 py-1 text-xs font-semibold text-purple shadow-soft backdrop-blur">

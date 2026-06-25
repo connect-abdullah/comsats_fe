@@ -1,4 +1,5 @@
 import { IMAGES } from "@/constants/shared/images";
+import { ADMISSIONS_PORTAL_URL } from "@/constants/shared/urls";
 import type { FeaturedNewsArticle, NewsArticle } from "@/types";
 
 export const FEATURED_NEWS: FeaturedNewsArticle[] = [
@@ -71,7 +72,7 @@ export const FEATURED_NEWS: FeaturedNewsArticle[] = [
     category: "ANNOUNCEMENTS",
     categoryColor: "blue",
     date: { day: 1, month: "September", year: 2026 },
-    href: "/admissions",
+    href: ADMISSIONS_PORTAL_URL,
     ctaLabel: "Apply Now",
   },
 ];

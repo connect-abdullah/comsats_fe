@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import { cn } from "@/lib/utils";
 
 type EditorialVariant = "feature" | "news" | "event" | "academic";
@@ -73,13 +74,13 @@ export function EditorialCard({
           src={image}
           alt={title}
           fill
-          priority={priority}
           sizes={
             variant === "event"
               ? "280px"
               : "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           }
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          {...getImageLoadingProps({ priority })}
         />
         {category && (
           <span

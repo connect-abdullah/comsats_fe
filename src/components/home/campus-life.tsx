@@ -37,7 +37,7 @@ export function CampusLife() {
               title={card.title}
               description={card.description}
               ctaLabel={card.ctaLabel}
-              href="#campus-life"
+              href={card.href ?? "/campus-life"}
               elevated={index === 1}
             />
           </div>
@@ -46,7 +46,7 @@ export function CampusLife() {
 
       <div className="mt-12 text-center">
         <Link
-          href="#campus-life"
+          href="/campus-life"
           className="inline-flex items-center justify-center rounded-pill bg-purple px-8 py-4 text-sm font-semibold text-white shadow-md shadow-purple/20 transition-colors hover:bg-blue"
         >
           Explore Campus Life

@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PrimaryButton } from "@/components/ui/primary-button";
 import { FEATURED_NEWS } from "@/constants/news/page";
+import { getImageLoadingProps } from "@/lib/image-loading";
 import { cn } from "@/lib/utils";
 
 const AUTO_ADVANCE_MS = 3500;
@@ -64,10 +65,10 @@ export function FeaturedNewsCarousel() {
             src={slide.image}
             alt=""
             fill
-            priority={activeIndex === 0}
             sizes="100vw"
             className="object-cover"
             aria-hidden="true"
+            {...getImageLoadingProps()}
           />
           <div
             className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/40 to-ink/20"

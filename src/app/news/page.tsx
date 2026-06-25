@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { NewsHero } from "@/components/news/news-hero";
 import { FeaturedNewsCarousel } from "@/components/news/featured-news-carousel";
 import { NewsGrid } from "@/components/news/news-grid";
+import { PageHero } from "@/components/ui/page-hero";
+import { IMAGES } from "@/constants/shared/images";
 
 export const metadata: Metadata = {
   title: "News",
@@ -12,7 +13,13 @@ export const metadata: Metadata = {
 export default function NewsPage() {
   return (
     <>
-      <NewsHero />
+      <PageHero
+        badge="Islamabad News"
+        title="Campus News"
+        tagline="Your University, Your News"
+        description="Stay informed with the latest announcements, research, events, and campus stories from COMSATS University Islamabad."
+        backgroundImage={IMAGES.campus.overview}
+      />
       <FeaturedNewsCarousel />
       <NewsGrid />
     </>

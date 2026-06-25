@@ -39,6 +39,7 @@ export const CAMPUS_LIFE_CARDS: CampusLifeCard[] = [
       "Fully staffed 24/7 medical centers, on-site diagnostics, counseling clinics, and state-of-the-art sports therapy complexes.",
     image: IMAGES.campusLife.healthCare,
     ctaLabel: "View Health Portal",
+    href: "/health-care",
   },
   {
     title: "Student Service Center",
