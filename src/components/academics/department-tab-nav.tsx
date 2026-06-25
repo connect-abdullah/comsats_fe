@@ -119,7 +119,10 @@ export function DepartmentTabNav({
 
       <nav
         aria-label="Academic departments"
-        className={cn("hidden lg:block lg:sticky lg:top-28 lg:self-start", className)}
+        className={cn(
+          "hidden lg:block lg:sticky lg:top-28 lg:self-start",
+          className,
+        )}
       >
         <div
           className="overflow-hidden rounded-card border border-line/60 bg-white shadow-soft"

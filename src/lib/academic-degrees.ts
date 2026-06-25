@@ -5,9 +5,7 @@ const LEVEL_ORDER: DegreeLevel[] = ["BS", "MS", "PhD"];
 const MS_ABBREVIATIONS = new Set(["MS", "MBA", "MSPM"]);
 
 function isAccreditationBadge(abbreviation: string) {
-  return (
-    abbreviation.includes("Accredited") || abbreviation.includes("NBEAC")
-  );
+  return abbreviation.includes("Accredited") || abbreviation.includes("NBEAC");
 }
 
 export function getDegreeLevel(degree: AcademicDegree): DegreeLevel {
@@ -15,11 +13,7 @@ export function getDegreeLevel(degree: AcademicDegree): DegreeLevel {
   const rawAbbr = degree.abbreviation?.trim() ?? "";
   const abbr = isAccreditationBadge(rawAbbr) ? "" : rawAbbr.toUpperCase();
 
-  if (
-    name.includes("doctor") ||
-    name.includes("ph.d") ||
-    abbr === "PHD"
-  ) {
+  if (name.includes("doctor") || name.includes("ph.d") || abbr === "PHD") {
     return "PhD";
   }
 

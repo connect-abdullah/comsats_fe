@@ -11,7 +11,10 @@ interface ResearchMetricCardProps {
   className?: string;
 }
 
-export function ResearchMetricCard({ stat, className }: ResearchMetricCardProps) {
+export function ResearchMetricCard({
+  stat,
+  className,
+}: ResearchMetricCardProps) {
   const Icon = stat.icon;
 
   return (

@@ -20,7 +20,9 @@ function HeroCtaButton({ cta }: { cta: HeroCta }) {
       <Link
         href={cta.href}
         className="w-full sm:w-auto"
-        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        {...(isExternal
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
       >
         <ShimmerButton
           className="w-full px-7 py-3.5 text-base font-semibold shadow-glow sm:w-auto"
@@ -40,7 +42,9 @@ function HeroCtaButton({ cta }: { cta: HeroCta }) {
       <Link
         href={cta.href}
         className="inline-flex min-h-[44px] w-full items-center justify-center text-sm font-semibold text-white/90 underline-offset-4 transition-colors hover:text-white hover:underline sm:w-auto sm:justify-start"
-        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        {...(isExternal
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
       >
         {cta.label}
       </Link>
@@ -89,9 +93,7 @@ export function PageHero({
       id={id}
       className={cn(
         "relative flex items-center overflow-hidden pt-32 pb-16 sm:pt-36 lg:pt-40",
-        isCompact
-          ? "min-h-[480px] sm:min-h-[520px]"
-          : "min-h-screen pb-20",
+        isCompact ? "min-h-[480px] sm:min-h-[520px]" : "min-h-screen pb-20",
       )}
     >
       <Image

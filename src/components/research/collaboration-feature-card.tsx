@@ -20,10 +20,7 @@ export function CollaborationFeatureCard({
   return (
     <motion.div
       variants={fadeUp}
-      className={cn(
-        "bg-white p-5 sm:p-10",
-        className,
-      )}
+      className={cn("bg-white p-5 sm:p-10", className)}
     >
       <span className="text-2xl font-bold text-purple/20 sm:text-3xl">
         {String(index + 1).padStart(2, "0")}

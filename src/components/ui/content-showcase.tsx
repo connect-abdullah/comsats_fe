@@ -42,7 +42,12 @@ function ShowcaseImagePanel({
       viewport={viewportOnce}
       className="relative overflow-hidden rounded-card shadow-lift"
     >
-      <div className={cn("relative overflow-hidden", aspectClasses[aspect ?? "16/10"])}>
+      <div
+        className={cn(
+          "relative overflow-hidden",
+          aspectClasses[aspect ?? "16/10"],
+        )}
+      >
         <Image
           src={image}
           alt={imageAlt}

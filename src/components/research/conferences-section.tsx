@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 import { ConferencePointList } from "@/components/research/conference-point-list";
 import { SectionContainer } from "@/components/ui/section-container";
 import { SectionHeader } from "@/components/ui/section-header";
-import {
-  CONFERENCES,
-  CONFERENCES_SECTION,
-} from "@/constants/research/page";
+import { CONFERENCES, CONFERENCES_SECTION } from "@/constants/research/page";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
 export function ConferencesSection() {

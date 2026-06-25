@@ -116,7 +116,10 @@ export const CONFERENCES_SECTION = {
 };
 
 export const CONFERENCES: ConferenceItem[] = [
-  { name: "SAICON", tagline: "Annual international conference on applied sciences" },
+  {
+    name: "SAICON",
+    tagline: "Annual international conference on applied sciences",
+  },
   {
     name: "PAK-CHINA BUSINESS FORUM",
     tagline: "Cross-border business and innovation dialogue",

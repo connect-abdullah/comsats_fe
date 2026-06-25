@@ -22,7 +22,8 @@ export const HARASSMENT_POLICY = {
   heading: "Harassment Policy",
   description:
     "COMSATS University Islamabad is committed to maintaining a safe, respectful, and inclusive environment for all members of its community. Harassment in any form is taken seriously and the university encourages students, faculty, and staff to seek support whenever needed. Individuals are encouraged to report incidents through the appropriate channels so that timely and effective action can be taken. The wellbeing, dignity, and safety of every member of the university community remain a top priority.",
-  imageAlt: "Safe and respectful campus environment at COMSATS University Islamabad",
+  imageAlt:
+    "Safe and respectful campus environment at COMSATS University Islamabad",
 };
 
 export const SPORTS_WELLNESS = {
@@ -71,7 +72,8 @@ export const STUDENT_SOCIETIES = {
     "Sports Club",
     "Telecom Society",
   ],
-  imageAlt: "Student societies and organizations at COMSATS University Islamabad",
+  imageAlt:
+    "Student societies and organizations at COMSATS University Islamabad",
 };
 
 export const CAFETERIA = {
@@ -79,7 +81,8 @@ export const CAFETERIA = {
   heading: "Student Service Center & Cafeteria",
   description:
     "COMSATS University Islamabad offers a food-street style dining experience featuring shops, kiosks, cafés, and meal options available throughout the day. Students can relax, socialize, and enjoy refreshments in a comfortable environment while faculty members and visitors can access a modern food hall offering a variety of meals in a clean and welcoming setting. The facility contributes significantly to campus life by creating spaces for interaction, relaxation, and community building.",
-  imageAlt: "Student Service Center and cafeteria at COMSATS University Islamabad",
+  imageAlt:
+    "Student Service Center and cafeteria at COMSATS University Islamabad",
 };
 
 export const CAMPUS_LIFE_FINAL_CTA = {

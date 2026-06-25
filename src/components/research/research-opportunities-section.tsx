@@ -18,7 +18,10 @@ export function ResearchOpportunitiesSection({
   id,
 }: ResearchOpportunitiesSectionProps) {
   return (
-    <SectionContainer id={id ?? "research-opportunities"} className="bg-surface">
+    <SectionContainer
+      id={id ?? "research-opportunities"}
+      className="bg-surface"
+    >
       <SectionHeader
         label={RESEARCH_OPPORTUNITIES_SECTION.label}
         heading={RESEARCH_OPPORTUNITIES_SECTION.heading}

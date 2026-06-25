@@ -25,7 +25,10 @@ function KnowledgePattern() {
 
 export function LibraryShowcase() {
   return (
-    <SectionContainer id="library-resources" className="relative overflow-hidden bg-surface">
+    <SectionContainer
+      id="library-resources"
+      className="relative overflow-hidden bg-surface"
+    >
       <KnowledgePattern />
 
       <div className="relative grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
